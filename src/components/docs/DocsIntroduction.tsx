@@ -9,20 +9,20 @@ import {
 } from "@/components/library/LibraryCard";
 import { Package, Zap, Accessibility, Palette, Code2 } from "lucide-react";
 
-const installCode = `npm install @componentlib/react
+const installCode = `npm install @farhod_dev/super-ui
 
 # or with yarn
-yarn add @componentlib/react
+yarn add @farhod_dev/super-ui
 
 # or with pnpm
-pnpm add @componentlib/react`;
+pnpm add @farhod_dev/super-ui`;
 
-const importCode = `import { Button } from "@componentlib/react";
-import { Input } from "@componentlib/react";
-import { Card } from "@componentlib/react";
+const importCode = `import { Button } from "@farhod_dev/super-ui";
+import { Input } from "@farhod_dev/super-ui";
+import { Card } from "@farhod_dev/super-ui";
 
 // Or import all components
-import * as ComponentLib from "@componentlib/react";`;
+import * as SuperUI from "@farhod_dev/super-ui";`;
 
 export const DocsIntroduction: React.FC = () => {
   return (

@@ -7,15 +7,15 @@ Install **@farhod_dev/super-ui** using your preferred package manager:
 ::: code-group
 
 ```bash [pnpm]
-pnpm add @farhod_dev/super-ui
+pnpm add @farhod_dev/super-uir-ui
 ```
 
 ```bash [npm]
-npm install @farhod_dev/super-ui
+npm install @farhod_dev/super-uir-ui
 ```
 
 ```bash [yarn]
-yarn add @farhod_dev/super-ui
+yarn add @farhod_dev/super-uir-ui
 ```
 
 :::
@@ -72,8 +72,8 @@ Add Tailwind directives to your CSS file (e.g., `src/index.css`):
 Import the component styles in your main entry file:
 
 ```tsx
-// src/main.tsx or src/index.tsx
-import '@farhod_dev/super-ui/styles.css'
+// src/maimport { Button } from '@farhod_dev/super-ui'
+import '@farhod_dev/super-ui/dist/style.css'
 ```
 
 ## TypeScript Configuration
