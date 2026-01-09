@@ -1,0 +1,24 @@
+{
+    "hero": {
+        "badge": "Introducing ComponentLib",
+        "title": "Beautiful UI components built with Radix UI and Tailwind CSS.",
+        "description": "Accessible, composable, and customizable components that you can copy and paste into your apps. Free and open source.",
+        "viewDocs": "View Documentation",
+        "exploreComponents": "Explore Components",
+        "features": {
+            "customizable": "Customizable",
+            "accessible": "Accessible",
+            "openSource": "Open Source"
+        }
+    },
+    "nav": {
+        "documentation": "Documentation",
+        "components": "Components",
+        "themes": "Themes",
+        "github": "GitHub"
+    },
+    "language": {
+        "en": "English",
+        "uz": "O'zbekcha"
+    }
+}

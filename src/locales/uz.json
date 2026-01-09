@@ -1,0 +1,24 @@
+{
+    "hero": {
+        "badge": "ComponentLib Bilan Tanishing",
+        "title": "Radix UI va Tailwind CSS bilan qurilgan chiroyli UI komponentlar.",
+        "description": "Ilovalaringizga nusxalab qo'yishingiz mumkin bo'lgan, hamyongir va moslashuvchan komponentlar. Mutlaqo bepul va ochiq kodli.",
+        "viewDocs": "Hujjatlarni Ko'rish",
+        "exploreComponents": "Komponentlar",
+        "features": {
+            "customizable": "Moslashuvchan",
+            "accessible": "Qulay",
+            "openSource": "Ochiq Kodli"
+        }
+    },
+    "nav": {
+        "documentation": "Hujjatlar",
+        "components": "Komponentlar",
+        "themes": "Mavzular",
+        "github": "GitHub"
+    },
+    "language": {
+        "en": "English",
+        "uz": "O'zbekcha"
+    }
+}
