@@ -3,11 +3,10 @@ import { LibraryBadge } from "@/components/library/LibraryBadge";
 import { CodeBlock } from "@/components/CodeBlock";
 import {
   LibraryCard,
-  LibraryCardContent,
   LibraryCardHeader,
   LibraryCardTitle,
 } from "@/components/library/LibraryCard";
-import { Package, Zap, Accessibility, Palette, Code2 } from "lucide-react";
+import { Zap, Accessibility, Palette, Code2 } from "lucide-react";
 
 const installCode = `npm install @farhod_dev/super-ui
 

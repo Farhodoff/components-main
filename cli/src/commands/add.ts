@@ -54,8 +54,18 @@ export async function addCommand(components: string[], options: CLIOptions) {
                     continue
                 }
 
-                // Copy from templates
-                const sourcePath = path.join(__dirname, '../../templates/components/ui', file)
+                // Resolve templates directory correctly for both prod (dist) and dev (src)
+                const prodTemplatesPath = path.join(__dirname, '../templates/components/ui')
+                const devTemplatesPath = path.join(__dirname, '../../templates/components/ui')
+
+                let sourceDir = prodTemplatesPath
+                // We can't use await fileExists here easily without importing it or modifying the loop, 
+                // but we can check if we are in 'dist' or 'src' based on __dirname
+                if (__dirname.includes('src')) {
+                    sourceDir = devTemplatesPath
+                }
+
+                const sourcePath = path.join(sourceDir, file)
                 await copyFile(sourcePath, targetPath)
             }
 
