@@ -30,8 +30,10 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-2">
-            <Button variant="ghost" size="icon" aria-label="GitHub">
-              <Github className="h-4 w-4" />
+            <Button variant="ghost" size="icon" aria-label="GitHub" asChild>
+              <a href="https://github.com/Farhodoff" target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+              </a>
             </Button>
             <Button variant="ghost" size="icon" aria-label="Twitter">
               <Twitter className="h-4 w-4" />

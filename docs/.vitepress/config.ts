@@ -111,7 +111,7 @@ export default defineConfig({
         },
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/Farhodoff/components-main' },
+            { icon: 'github', link: 'https://github.com/Farhodoff' },
             { icon: 'npm', link: 'https://www.npmjs.com/package/@farhod_dev/super-ui' }
         ],
 

@@ -48,8 +48,10 @@ export const Header: React.FC = () => {
               <BookOpen className="h-4 w-4" />
             </Link>
           </Button>
-          <Button variant="ghost" size="icon" aria-label={t("nav.github")}>
-            <Github className="h-4 w-4" />
+          <Button variant="ghost" size="icon" asChild aria-label={t("nav.github")}>
+            <a href="https://github.com/Farhodoff" target="_blank" rel="noopener noreferrer">
+              <Github className="h-4 w-4" />
+            </a>
           </Button>
           <Button variant="gradient" size="sm" asChild>
             <Link to="/docs">Get Started</Link>
