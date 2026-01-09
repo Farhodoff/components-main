@@ -201,7 +201,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Farhod Soyilov**
 
-- GitHub: [@farhod_dev](https://github.com/farhod_dev)
+- GitHub: [@Farhodoff](https://github.com/Farhodoff)
 - NPM: [@farhod_dev](https://www.npmjs.com/~farhod_dev)
 
 ## 🙏 Acknowledgments
