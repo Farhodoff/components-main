@@ -3,7 +3,7 @@
 Ready-to-use 404 and 500 error pages.
 
 <script setup>
-import { NotFoundPage, ServerErrorPage } from '../../../src/components/templates/ErrorPages.tsx'
+import { NotFoundPage, ServerErrorPage } from '../../src/components/templates/ErrorPages.tsx'
 </script>
 
 ## 404 Not Found

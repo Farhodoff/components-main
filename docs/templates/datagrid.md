@@ -3,9 +3,9 @@
 A layout designed for complex data tables with filtering and actions.
 
 <script setup>
-import { DataGridLayout } from '../../../src/components/templates/DataGridLayout.tsx'
-import { DataTable }  from '../../../src/components/library/DataTable.tsx'
-import { Button } from '../../../src/components/ui/button.tsx'
+import { DataGridLayout } from '../../src/components/templates/DataGridLayout.tsx'
+import { DataTable }  from '../../src/components/library/DataTable.tsx'
+import { Button } from '../../src/components/ui/button.tsx'
 
 const columns = [
   { accessorKey: "id", header: "ID" },
