@@ -1,7 +1,7 @@
 # Badge
 
 <script setup>
-import { Badge } from '../../../src/components/ui/badge.tsx.tsx'
+import { Badge } from '../../../src/components/ui/badge.tsx'
 </script>
 
 <ComponentPreview :component="Badge">

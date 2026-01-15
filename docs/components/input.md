@@ -1,7 +1,7 @@
 # Input
 
 <script setup>
-import { Checkbox } from '../../../src/components/ui/checkbox.tsx.tsx'
+import { Input } from '../../../src/components/ui/input.tsx'
 </script>
 
 <ComponentPreview :component="Input">
