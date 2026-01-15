@@ -44,6 +44,10 @@ export * from './components/library/EmptyState';
 
 export * from './components/templates/AuthForms';
 export * from './components/templates/DashboardLayout';
+export * from './components/templates/LandingSections';
+export * from './components/templates/SettingsLayout';
+export * from './components/templates/DataGridLayout';
+export * from './components/templates/ErrorPages';
 
 export * from './components/theme-provider';
 export { default as i18n } from './i18n';
