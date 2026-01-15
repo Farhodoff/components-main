@@ -16,5 +16,5 @@ export default defineConfig({
     clean: true,
     treeshake: true,
     external: ["react", "react-dom"],
-    tsconfig: "tsconfig.app.json",
+    tsconfig: "tsconfig.build.json",
 });

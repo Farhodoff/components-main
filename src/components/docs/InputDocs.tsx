@@ -3,7 +3,7 @@ import { CodeBlock } from "@/components/CodeBlock";
 import { APIReferenceTable } from "@/components/docs/APIReferenceTable";
 import { LibraryInput } from "@/components/library/LibraryInput";
 import { LibraryBadge } from "@/components/library/LibraryBadge";
-import { Mail, Search, User, Lock } from "lucide-react";
+import { Mail, Search, User } from "lucide-react";
 
 const inputProps = [
   {

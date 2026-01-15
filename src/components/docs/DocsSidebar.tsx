@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Search, Package, ChevronRight } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -11,7 +11,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar";
 import { LibraryInput } from "@/components/library/LibraryInput";
@@ -33,7 +32,7 @@ const gettingStartedItems = [
 export function DocsSidebar() {
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
-  const location = useLocation();
+
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
 
