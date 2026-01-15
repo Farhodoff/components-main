@@ -1,7 +1,7 @@
 # Badge
 
 <script setup>
-import { Badge } from '../../../src/components/ui/badge'
+import { Badge } from '../../../src/components/ui/badge.tsx.tsx'
 </script>
 
 <ComponentPreview :component="Badge">
@@ -26,6 +26,14 @@ import { Badge } from '@/components/ui/badge'
 <Badge variant="destructive">Destructive</Badge>
 <Badge variant="outline">Outline</Badge>
 ```
+
+## API Reference
+
+### Badge Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+
 
 ## API Reference
 

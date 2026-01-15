@@ -1,7 +1,7 @@
 # Button
 
 <script setup>
-import { Button } from '../../../src/components/ui/button'
+import { Button } from '../../../src/components/ui/button.tsx'
 </script>
 
 A versatile button component with multiple variants and sizes.
@@ -148,6 +148,15 @@ function LoadingButton() {
 
 - Input - For text input fields
 - Select - For selection controls
+
+## API Reference
+
+### Button Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `asChild` | `boolean \| undefined` | - | - |
+
 
 ## API Reference
 

@@ -1,7 +1,7 @@
 # Select
 
 <script setup>
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../src/components/ui/select'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../src/components/ui/select.tsx'
 </script>
 
 <ComponentPreview :component="Select">
@@ -29,6 +29,12 @@ import { Select } from '@/components/ui/select'
   <option>Option 2</option>
 </Select>
 ```
+
+## API Reference
+
+### Select Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
 
 ## API Reference
 

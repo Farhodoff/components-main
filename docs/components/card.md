@@ -1,10 +1,10 @@
 # Card
 
 <script setup>
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../../src/components/ui/card'
-import { Button } from '../../../src/components/ui/button'
-import { Input } from '../../../src/components/ui/input'
-import { Label } from '../../../src/components/ui/label'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../../src/components/ui/card.tsx'
+import { Button } from '../../../src/components/ui/button.tsx'
+import { Input } from '../../../src/components/ui/input.tsx'
+import { Label } from '../../../src/components/ui/label.tsx'
 </script>
 
 <ComponentPreview :component="Card">
@@ -72,6 +72,12 @@ import {
 ## Examples
 
 See [Button documentation](/components/button) for more examples.
+
+## API Reference
+
+### Card Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
 
 ## API Reference
 

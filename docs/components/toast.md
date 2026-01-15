@@ -1,20 +1,14 @@
 # Toast
 
 <script setup>
-import { Button } from '../../../src/components/ui/button'
-import { useToast } from '../../../src/components/ui/use-toast'
-import { Toaster } from '../../../src/components/ui/toaster'
+import { Button } from '../../../src/components/ui/button.tsx'
+import { Toaster } from '../../../src/components/ui/toaster.tsx'
+import { useToast } from '../../../src/components/ui/use-toast.tsx'
 </script>
 
 <ComponentPreview :component="Toaster">
   <div className="flex flex-col gap-2">
-      <Button
-        onClick={() => {
-            // Need a way to access hook if inside preview...
-            // For now just showing static UI or wrapper might be tricky without full context provider 
-            // Better to show usage code clearly
-        }}
-      >
+      <Button>
         Show Toast (See Code)
       </Button>
       <Toaster />

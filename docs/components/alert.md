@@ -1,7 +1,7 @@
 # Alert
 
 <script setup>
-import { Alert, AlertTitle, AlertDescription } from '../../../src/components/ui/alert'
+import { Alert, AlertTitle, AlertDescription } from '../../../src/components/ui/alert.tsx'
 import { Terminal } from 'lucide-react'
 </script>
 
@@ -43,6 +43,12 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert'
   <AlertDescription>Something went wrong.</AlertDescription>
 </Alert>
 ```
+
+## API Reference
+
+### Alert Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
 
 ## API Reference
 

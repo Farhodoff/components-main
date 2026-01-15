@@ -1,7 +1,7 @@
 # Input
 
 <script setup>
-import { Input } from '../../../src/components/ui/input'
+import { Checkbox } from '../../../src/components/ui/checkbox.tsx.tsx'
 </script>
 
 <ComponentPreview :component="Input">
@@ -60,6 +60,12 @@ import { Input } from '@farhod_dev/super-ui'
 - Supports all ARIA attributes
 - Keyboard accessible
 - Works with form labels
+
+## API Reference
+
+### Input Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
 
 ## API Reference
 

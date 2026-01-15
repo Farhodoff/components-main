@@ -1,7 +1,7 @@
 # Checkbox
 
 <script setup>
-import { Checkbox } from '../../../src/components/ui/checkbox'
+import { Checkbox } from '../../../src/components/ui/checkbox.tsx'
 </script>
 
 <ComponentPreview :component="Checkbox">
@@ -29,6 +29,12 @@ import { Checkbox } from '@/components/ui/checkbox'
   <label htmlFor="terms">Accept terms and conditions</label>
 </div>
 ```
+
+## API Reference
+
+### Checkbox Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
 
 ## API Reference
 
