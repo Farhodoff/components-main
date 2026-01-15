@@ -4,7 +4,7 @@ test('has title', async ({ page }) => {
     await page.goto('/');
 
     // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/Vite/);
+    await expect(page).toHaveTitle(/ComponentLib/);
 });
 
 test('can navigate to documentation', async ({ page }) => {
@@ -17,12 +17,12 @@ test('can switch language', async ({ page }) => {
     await page.goto('/');
 
     // Check initial English text
-    await expect(page.getByText('Beautiful accessible')).toBeVisible();
+    await expect(page.getByText('Beautiful UI components built with Radix UI and Tailwind CSS.')).toBeVisible();
 
     // Open language switcher
     await page.getByRole('button', { name: 'Switch language' }).click();
     await page.getByText("O'zbekcha").click();
 
     // Check Uzbek text
-    await expect(page.getByText('Radix UI va Tailwind CSS')).toBeVisible();
+    await expect(page.getByText('Radix UI va Tailwind CSS bilan qurilgan chiroyli UI komponentlar.')).toBeVisible();
 });
