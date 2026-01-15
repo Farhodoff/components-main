@@ -1,6 +1,54 @@
 # Dialog
 
-Modal dialog window for important interactions.
+<script setup>
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../../src/components/ui/dialog"
+import { Button } from "../../../src/components/ui/button"
+import { Input } from "../../../src/components/ui/input"
+import { Label } from "../../../src/components/ui/label"
+</script>
+
+<ComponentPreview :component="Dialog">
+  <Dialog>
+    <DialogTrigger asChild>
+      <Button variant="outline">Edit Profile</Button>
+    </DialogTrigger>
+    <DialogContent className="sm:max-w-[425px]">
+      <DialogHeader>
+        <DialogTitle>Edit profile</DialogTitle>
+        <DialogDescription>
+          Make changes to your profile here. Click save when you're done.
+        </DialogDescription>
+      </DialogHeader>
+      <div className="grid gap-4 py-4">
+        <div className="grid grid-cols-4 items-center gap-4">
+          <Label htmlFor="name" className="text-right">
+            Name
+          </Label>
+          <Input id="name" value="Pedro Duarte" className="col-span-3" />
+        </div>
+        <div className="grid grid-cols-4 items-center gap-4">
+          <Label htmlFor="username" className="text-right">
+            Username
+          </Label>
+          <Input id="username" value="@peduarte" className="col-span-3" />
+        </div>
+      </div>
+      <DialogFooter>
+        <Button type="submit">Save changes</Button>
+      </DialogFooter>
+    </DialogContent>
+  </Dialog>
+</ComponentPreview>
+
+A window overlaid on either the primary window or another dialog window.
 
 ## Usage
 
@@ -12,19 +60,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/components/ui/dialog'
-
-<Dialog>
-  <DialogTrigger asChild>
-    <Button>Open Dialog</Button>
-  </DialogTrigger>
-  <DialogContent>
-    <DialogHeader>
-      <DialogTitle>Are you sure?</DialogTitle>
-      <DialogDescription>
-        This action cannot be undone.
-      </DialogDescription>
-    </DialogHeader>
-  </DialogContent>
-</Dialog>
+} from "@/components/ui/dialog"
 ```
+
+## API Reference

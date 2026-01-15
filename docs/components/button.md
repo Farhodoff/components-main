@@ -1,8 +1,16 @@
 # Button
 
+<script setup>
+import { Button } from '../../../src/components/ui/button'
+</script>
+
 A versatile button component with multiple variants and sizes.
 
 ## Usage
+
+<ComponentPreview :component="Button">
+  <Button>Click me</Button>
+</ComponentPreview>
 
 ```tsx
 import { Button } from '@farhod_dev/super-ui'
@@ -86,18 +94,11 @@ import { Mail } from 'lucide-react'
 
 ## API Reference
 
-### Props
+### Button Props
 
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
-| `variant` | `'default' \| 'secondary' \| 'destructive' \| 'outline' \| 'ghost' \| 'link'` | `'default'` | Button visual style |
-| `size` | `'sm' \| 'default' \| 'lg' \| 'icon'` | `'default'` | Button size |
-| `disabled` | `boolean` | `false` | Disable button interaction |
-| `asChild` | `boolean` | `false` | Render as child element |
-| `className` | `string` | - | Additional CSS classes |
-| `onClick` | `(event: MouseEvent) => void` | - | Click event handler |
-
-Extends all native HTML `<button>` attributes.
+| `asChild` | `boolean \| undefined` | - | - |
 
 ## Accessibility
 
@@ -147,3 +148,39 @@ function LoadingButton() {
 
 - Input - For text input fields
 - Select - For selection controls
+
+## API Reference
+
+### Button Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `asChild` | `boolean \| undefined` | - | - |
+
+
+## API Reference
+
+### Button Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `asChild` | `boolean \| undefined` | - | - |
+
+
+## API Reference
+
+### Button Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `asChild` | `boolean \| undefined` | - | - |
+
+
+## API Reference
+
+### Button Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `asChild` | `boolean \| undefined` | - | - |
+

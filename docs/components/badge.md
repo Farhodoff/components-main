@@ -1,5 +1,13 @@
 # Badge
 
+<script setup>
+import { Badge } from '../../../src/components/ui/badge'
+</script>
+
+<ComponentPreview :component="Badge">
+  <Badge>Badge</Badge>
+</ComponentPreview>
+
 Small status or label indicator.
 
 ## Usage
@@ -18,3 +26,43 @@ import { Badge } from '@/components/ui/badge'
 <Badge variant="destructive">Destructive</Badge>
 <Badge variant="outline">Outline</Badge>
 ```
+
+## API Reference
+
+### Badge Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+
+
+## API Reference
+
+### Badge Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+
+
+## API Reference
+
+### Badge Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+
+
+## API Reference
+
+### Badge Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+
+
+## API Reference
+
+### Badge Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+

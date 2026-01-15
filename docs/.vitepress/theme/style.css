@@ -1,0 +1,10 @@
+/* Custom styles for the documentation */
+:root {
+    --vp-c-brand-1: #0ea5e9;
+    --vp-c-brand-2: #0284c7;
+    --vp-c-brand-3: #0369a1;
+}
+
+.dark {
+    --vp-c-bg-soft: #1e293b;
+}

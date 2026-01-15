@@ -1,5 +1,13 @@
 # Input
 
+<script setup>
+import { Input } from '../../../src/components/ui/input'
+</script>
+
+<ComponentPreview :component="Input">
+  <Input placeholder="Email" type="email" />
+</ComponentPreview>
+
 A text input field with validation support.
 
 ## Usage
@@ -32,26 +40,19 @@ const [value, setValue] = useState('')
   value={value}
   onChange={(e) => setValue(e.target.value)}
 />
+import { Input } from '@farhod_dev/super-ui'
+
+<Input placeholder="Email" type="email" />
 ```
 
-### Different Types
+## API Reference
 
-```tsx
-<Input type="email" placeholder="Email" />
-<Input type="password" placeholder="Password" />
-<Input type="number" placeholder="Age" />
-<Input type="search" placeholder="Search..." />
-```
+### Input Props
 
-### Disabled
-
-```tsx
-<Input disabled placeholder="Disabled input" />
-```
-
-## Props
-
-Extends all native HTML `<input>` attributes.
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `type` | `string` | `"text"` | Input type |
+| `placeholder` | `string` | - | Placeholder text |
 
 ## Accessibility
 
@@ -59,3 +60,21 @@ Extends all native HTML `<input>` attributes.
 - Supports all ARIA attributes
 - Keyboard accessible
 - Works with form labels
+
+## API Reference
+
+### Input Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
+
+## API Reference
+
+### Input Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
+
+## API Reference
+
+### Input Props
+
+This component extends standard HTML attributes for its element type. No specific custom props are defined in a named interface.
