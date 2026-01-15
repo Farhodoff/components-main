@@ -6,8 +6,8 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "../../../src/components/ui/tooltip"
-import { Button } from "../../../src/components/ui/button"
+} from "../../../src/components/ui/tooltip.tsx"
+import { Button } from "../../../src/components/ui/button.tsx"
 </script>
 
 <ComponentPreview :component="Tooltip">
