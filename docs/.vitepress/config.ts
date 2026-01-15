@@ -1,7 +1,15 @@
 import { defineConfig } from 'vitepress'
+import path from 'path'
 
 export default defineConfig({
-    title: '@farhod_dev/super-ui',
+    vite: {
+        resolve: {
+            alias: {
+                '@': path.resolve(__dirname, '../../src'),
+            },
+        },
+    },
+    title: 'Super UI',
     description: 'A comprehensive, accessible React component library built with Radix UI and Tailwind CSS',
 
     head: [
