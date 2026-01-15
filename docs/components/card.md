@@ -1,10 +1,10 @@
 # Card
 
 <script setup>
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../../src/components/ui/card.tsx'
-import { Button } from '../../../src/components/ui/button.tsx'
-import { Input } from '../../../src/components/ui/input.tsx'
-import { Label } from '../../../src/components/ui/label.tsx'
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../../src/components/ui/card.tsx'
+import { Button } from '../../src/components/ui/button.tsx'
+import { Input } from '../../src/components/ui/input.tsx'
+import { Label } from '../../src/components/ui/label.tsx'
 </script>
 
 <ComponentPreview :component="Card">

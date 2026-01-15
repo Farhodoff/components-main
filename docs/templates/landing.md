@@ -3,7 +3,7 @@
 Pre-built sections to quickly assemble a high-converting landing page.
 
 <script setup>
-import { HeroSection, FeaturesSection, PricingSection, Footer } from '../../../src/components/templates/LandingSections.tsx'
+import { HeroSection, FeaturesSection, PricingSection, Footer } from '../../src/components/templates/LandingSections.tsx'
 </script>
 
 ## Hero Section

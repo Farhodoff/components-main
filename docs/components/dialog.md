@@ -9,10 +9,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../../src/components/ui/dialog.tsx"
-import { Button } from "../../../src/components/ui/button.tsx"
-import { Input } from "../../../src/components/ui/input.tsx"
-import { Label } from "../../../src/components/ui/label.tsx"
+} from "../../src/components/ui/dialog.tsx"
+import { Button } from "../../src/components/ui/button.tsx"
+import { Input } from "../../src/components/ui/input.tsx"
+import { Label } from "../../src/components/ui/label.tsx"
 </script>
 
 <ComponentPreview :component="Dialog">

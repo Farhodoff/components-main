@@ -1,7 +1,7 @@
 # Checkbox
 
 <script setup>
-import { Checkbox } from '../../../src/components/ui/checkbox.tsx'
+import { Checkbox } from '../../src/components/ui/checkbox.tsx'
 </script>
 
 <ComponentPreview :component="Checkbox">

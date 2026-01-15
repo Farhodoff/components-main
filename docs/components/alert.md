@@ -1,7 +1,7 @@
 # Alert
 
 <script setup>
-import { Alert, AlertTitle, AlertDescription } from '../../../src/components/ui/alert.tsx'
+import { Alert, AlertTitle, AlertDescription } from '../../src/components/ui/alert.tsx'
 import { Terminal } from 'lucide-react'
 </script>
 

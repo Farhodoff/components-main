@@ -1,7 +1,7 @@
 # Select
 
 <script setup>
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../src/components/ui/select.tsx'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../src/components/ui/select.tsx'
 </script>
 
 <ComponentPreview :component="Select">

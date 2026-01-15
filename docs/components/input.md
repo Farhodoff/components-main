@@ -1,7 +1,7 @@
 # Input
 
 <script setup>
-import { Input } from '../../../src/components/ui/input.tsx'
+import { Input } from '../../src/components/ui/input.tsx'
 </script>
 
 <ComponentPreview :component="Input">

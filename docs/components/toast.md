@@ -1,9 +1,9 @@
 # Toast
 
 <script setup>
-import { Button } from '../../../src/components/ui/button.tsx'
-import { Toaster } from '../../../src/components/ui/toaster.tsx'
-import { useToast } from '../../../src/components/ui/use-toast.tsx'
+import { Button } from '../../src/components/ui/button.tsx'
+import { Toaster } from '../../src/components/ui/toaster.tsx'
+import { useToast } from '../../src/components/ui/use-toast.ts'
 </script>
 
 <ComponentPreview :component="Toaster">

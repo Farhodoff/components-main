@@ -1,7 +1,7 @@
 # Button
 
 <script setup>
-import { Button } from '../../../src/components/ui/button.tsx'
+import { Button } from '../../src/components/ui/button.tsx'
 </script>
 
 A versatile button component with multiple variants and sizes.

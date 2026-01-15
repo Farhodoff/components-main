@@ -3,7 +3,7 @@
 A comprehensive settings page layout with sidebar navigation and forms.
 
 <script setup>
-import { SettingsLayout, ProfileForm, NotificationsForm, AccountForm } from '../../../src/components/templates/SettingsLayout.tsx'
+import { SettingsLayout, ProfileForm, NotificationsForm, AccountForm } from '../../src/components/templates/SettingsLayout.tsx'
 import { useState } from 'react'
 
 
