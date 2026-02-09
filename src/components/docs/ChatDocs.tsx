@@ -2,7 +2,6 @@ import React from "react";
 import { Copy } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChatInterface } from "@/components/templates/ChatInterface";
 
 export const ChatDocs: React.FC = () => {
     const codeExample = `import { ChatInterface } from '@farhod_dev/super-ui';
@@ -30,17 +29,9 @@ function App() {
                     Perfect for building messaging apps or support chat tools.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                    <Button asChild>
-                        <a href="/templates/chat" target="_blank">Open Full Screen Demo</a>
+                    <Button size="lg" asChild>
+                        <a href="/templates/chat" target="_blank">View Live Demo (Full Screen)</a>
                     </Button>
-                </div>
-            </div>
-
-            {/* Interactive Demo Section - Full Width */}
-            <div className="space-y-4">
-                <h2 className="text-2xl font-semibold">Interactive Demo</h2>
-                <div className="border rounded-xl overflow-hidden h-[700px] shadow-lg flex flex-col bg-background ring-1 ring-slate-200 dark:ring-slate-800">
-                    <ChatInterface />
                 </div>
             </div>
 
