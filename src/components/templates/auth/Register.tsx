@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -38,9 +39,27 @@ export function RegisterTemplate() {
 
     async function onSubmit(data: RegisterFormValues) {
         setIsLoading(true);
-        // Simulate API call
-        console.log(data);
-        setTimeout(() => setIsLoading(false), 2000);
+        try {
+            const { error } = await supabase.auth.signUp({
+                email: data.email,
+                password: data.password,
+                options: {
+                    data: {
+                        full_name: data.name,
+                    },
+                },
+            })
+
+            if (error) {
+                alert(error.message)
+            } else {
+                alert("Registration successful! Please check your email for verification.")
+            }
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setIsLoading(false);
+        }
     }
 
     return (

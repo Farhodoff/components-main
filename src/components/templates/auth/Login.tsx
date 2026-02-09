@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "@/lib/supabase";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -40,9 +41,23 @@ export function LoginTemplate() {
 
     async function onSubmit(data: LoginFormValues) {
         setIsLoading(true);
-        // Simulate API call
-        console.log(data);
-        setTimeout(() => setIsLoading(false), 2000);
+        try {
+            const { error } = await supabase.auth.signInWithPassword({
+                email: data.email,
+                password: data.password,
+            })
+
+            if (error) {
+                alert(error.message)
+            } else {
+                // Redirect or handle success
+                console.log("Logged in successfully")
+            }
+        } catch (error) {
+            console.error(error)
+        } finally {
+            setIsLoading(false);
+        }
     }
 
     return (
