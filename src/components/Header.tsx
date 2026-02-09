@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { LibraryBadge } from "./library/LibraryBadge";
-import { BookOpen, Github, Package, User } from "lucide-react";
+import { Github, Package, User as UserIcon } from "lucide-react";
 import { LanguageSwitcher } from "./ui/language-switcher";
 import { ThemeCustomizer } from "./ui/theme-customizer";
 import { supabase } from "@/lib/supabase";

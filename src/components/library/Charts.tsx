@@ -221,7 +221,7 @@ export function SimplePieChart({
                     dataKey={dataKey}
                     nameKey={index}
                 >
-                    {data.map((entry, index) => (
+                    {data.map((_, index) => (
                         <Cell key={`cell-${index} `} fill={colors[index % colors.length]} stroke="hsl(var(--background))" strokeWidth={2} />
                     ))}
                 </Pie>
