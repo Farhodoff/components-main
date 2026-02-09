@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     DndContext,
     closestCorners,
@@ -16,14 +16,8 @@ import {
 import { arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import { KanbanColumn } from "./KanbanColumn";
 import { KanbanCard, KanbanTask } from "./KanbanCard";
-
-// Mock Data
-const initialTasks: KanbanTask[] = [
-    { id: "1", title: "Research Competitors", description: "Analyze top 3 competitors in the market.", tag: "Research" },
-    { id: "2", title: "Design System", description: "Create atom components for the UI library.", tag: "Design" },
-    { id: "3", title: "API Integration", description: "Connect frontend with backend services.", tag: "Dev" },
-    { id: "4", title: "User Testing", description: "Conduct interviews with 5 potential users.", tag: "QA" },
-];
+import { api, Task } from "@/services/api";
+import { toast } from "sonner";
 
 const defaultCols = [
     { id: "todo", title: "To Do" },
@@ -33,6 +27,8 @@ const defaultCols = [
 
 export const KanbanBoard: React.FC = () => {
     const [activeTask, setActiveTask] = useState<KanbanTask | null>(null);
+    const [tasks, setTasks] = useState<Task[]>([]);
+    const [loading, setLoading] = useState(true);
 
     const sensors = useSensors(
         useSensor(PointerSensor),
@@ -51,89 +47,44 @@ export const KanbanBoard: React.FC = () => {
         }),
     };
 
-    // Helper to find column for a task
-    // simplified: we act as if column ID is part of task state, but for this demo 
-    // we might need to map tasks to columns.
-    // For simplicity, let's distribute them.
-    // In a real app, tasks would have a 'status' or 'columnId' field.
-    // Let's add that to our local state management approach for this demo.
+    useEffect(() => {
+        fetchTasks();
+    }, []);
 
-    // Actually, standard dnd-kit kanban examples often keep structured state.
-    // Let's refactor state to be a map of columnId -> taskIds or tasks having status.
-    // Let's go with tasks having a status for simplicity.
-    const [taskState, setTaskState] = useState<{ [key: string]: KanbanTask[] }>({
-        "todo": [initialTasks[0], initialTasks[1]],
-        "in-progress": [initialTasks[2]],
-        "done": [initialTasks[3]],
-    });
-
-    const findContainer = (id: string) => {
-        if (id in taskState) {
-            return id;
+    const fetchTasks = async () => {
+        try {
+            const data = await api.getTasks();
+            setTasks(data);
+        } catch (error) {
+            console.error("Failed to fetch tasks:", error);
+            toast.error("Failed to load tasks");
+        } finally {
+            setLoading(false);
         }
-        return Object.keys(taskState).find((key) =>
-            taskState[key].find((t) => t.id === id)
-        ) as string;
+    };
+
+    // Helper to find column for a task
+    const findContainer = (id: string) => {
+        const task = tasks.find(t => t.id === id);
+        return task ? task.status : "todo";
     };
 
     const handleDragStart = (event: DragStartEvent) => {
         const { active } = event;
         const id = active.id as string;
-        const container = findContainer(id);
-        const task = taskState[container].find((t) => t.id === id);
+        const task = tasks.find((t) => t.id === id);
         if (task) setActiveTask(task);
     };
 
     const handleDragOver = (event: DragOverEvent) => {
-        const { active, over } = event;
-        const overId = over?.id;
-
-        if (!overId || active.id === overId) return;
-
-        const activeContainer = findContainer(active.id as string);
-        const overContainer = findContainer(overId as string);
-
-        if (!activeContainer || !overContainer || activeContainer === overContainer) {
-            return;
-        }
-
-        setTaskState((prev) => {
-            const activeItems = prev[activeContainer];
-            const overItems = prev[overContainer];
-            const activeIndex = activeItems.findIndex((i) => i.id === active.id);
-            const overIndex = overItems.findIndex((i) => i.id === overId);
-
-            let newIndex;
-            if (overId in prev) {
-                newIndex = overItems.length + 1;
-            } else {
-                const isBelowOverItem =
-                    over &&
-                    active.rect.current.translated &&
-                    active.rect.current.translated.top >
-                    over.rect.top + over.rect.height;
-
-                const modifier = isBelowOverItem ? 1 : 0;
-                newIndex = overIndex >= 0 ? overIndex + modifier : overItems.length + 1;
-            }
-
-            return {
-                ...prev,
-                [activeContainer]: [
-                    ...prev[activeContainer].filter((item) => item.id !== active.id),
-                ],
-                [overContainer]: [
-                    ...prev[overContainer].slice(0, newIndex),
-                    activeItems[activeIndex],
-                    ...prev[overContainer].slice(newIndex, overItems.length),
-                ],
-            };
-        });
+        // In this implementation, we handle logical updates in DragEnd
+        // Visual updates during DragOver can be added for smoother UX
+        // but for now we rely on DragEnd for the actual state change.
     };
 
-    const handleDragEnd = (event: DragEndEvent) => {
+    const handleDragEnd = async (event: DragEndEvent) => {
         const { active, over } = event;
-        const { id } = active;
+        const activeId = active.id as string;
         const overId = over?.id;
 
         if (!overId) {
@@ -141,35 +92,65 @@ export const KanbanBoard: React.FC = () => {
             return;
         }
 
-        const activeContainer = findContainer(id as string);
-        const overContainer = findContainer(overId as string);
+        const activeTask = tasks.find(t => t.id === activeId);
+        if (!activeTask) return;
 
-        if (
-            activeContainer &&
-            overContainer &&
-            activeContainer === overContainer
-        ) {
-            const activeIndex = taskState[activeContainer].findIndex(
-                (t) => t.id === id
-            );
-            const overIndex = taskState[overContainer].findIndex(
-                (t) => t.id === overId
-            );
+        // Determine destination column
+        let newStatus = activeTask.status;
 
-            if (activeIndex !== overIndex) {
-                setTaskState((prev) => ({
-                    ...prev,
-                    [activeContainer]: arrayMove(
-                        prev[activeContainer],
-                        activeIndex,
-                        overIndex
-                    ),
-                }));
+        // If dropped over a column directly
+        if (defaultCols.find(c => c.id === overId)) {
+            newStatus = overId as Task['status'];
+        } else {
+            // Dropped over another task
+            const overTask = tasks.find(t => t.id === overId);
+            if (overTask) {
+                newStatus = overTask.status;
+            }
+        }
+
+        // Optimistic update
+        const oldStatus = activeTask.status;
+
+        if (newStatus !== oldStatus) {
+            setTasks(prev => prev.map(t =>
+                t.id === activeId ? { ...t, status: newStatus } : t
+            ));
+
+            try {
+                await api.updateTaskStatus(activeId, newStatus);
+            } catch (error) {
+                console.error("Failed to update task status:", error);
+                toast.error("Failed to save changes");
+                // Revert
+                setTasks(prev => prev.map(t =>
+                    t.id === activeId ? { ...t, status: oldStatus } : t
+                ));
             }
         }
 
         setActiveTask(null);
     };
+
+    // Group tasks by column
+    const tasksByColumn: { [key: string]: Task[] } = {
+        "todo": [],
+        "in-progress": [],
+        "done": []
+    };
+
+    tasks.forEach(task => {
+        if (tasksByColumn[task.status]) {
+            tasksByColumn[task.status].push(task);
+        } else {
+            // Fallback for unknown status
+            tasksByColumn["todo"].push(task);
+        }
+    });
+
+    if (loading) {
+        return <div className="p-4">Loading tasks...</div>;
+    }
 
     return (
         <DndContext
@@ -185,7 +166,7 @@ export const KanbanBoard: React.FC = () => {
                         key={col.id}
                         id={col.id}
                         title={col.title}
-                        tasks={taskState[col.id] || []}
+                        tasks={tasksByColumn[col.id]}
                     />
                 ))}
             </div>
