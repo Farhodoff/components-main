@@ -193,8 +193,18 @@ src/
 Bu loyihada NPM ga avtomatik yuklash uchun GitHub Action sozlangan.
 
 ### Sozlash
-1. GitHub repozitoriysingizdagi **Settings -> Secrets and variables -> Actions** bo'limiga kiring.
-2. `NPM_TOKEN` nomli yangi secret yarating va unga NPM tokeningizni joylang.
+1. **NPM Token olish:**
+    - [npmjs.com](https://www.npmjs.com/) ga kiring va profilingizga bosing.
+    - **Access Tokens** bo'limini tanlang.
+    - **Generate New Token** tugmasini bosing.
+    - **Classic Token** ni tanlang (Automation uchun).
+    - Nom bering (masalan: `github-action`) va **Automation** turini tanlang.
+    - Tokenni nusxalab oling (bu faqat bir marta ko'rinadi!).
+
+2. **GitHub ga joylash:**
+    - GitHub repozitoriysingizdagi **Settings -> Secrets and variables -> Actions** bo'limiga kiring.
+    - `NPM_TOKEN` nomli yangi secret yarating va nusxalangan tokenni joylang.
+
 3. O'zgarishlarni yuklang (Push).
 4. "Release" jarayoni avtomatik ishga tushadi:
     - Versiyani yangilash uchun Pull Request (PR) yaratadi.
