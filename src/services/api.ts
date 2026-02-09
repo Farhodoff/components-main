@@ -50,7 +50,7 @@ export const api = {
         return data as Task;
     },
 
-    getPayments: async () => {
+    async getPayments() {
         const { data, error } = await supabase
             .from("payments")
             .select("*")
@@ -58,5 +58,16 @@ export const api = {
 
         if (error) throw error;
         return data as Payment[];
+    },
+
+    async getProfile(userId: string) {
+        const { data, error } = await supabase
+            .from("profiles")
+            .select("*")
+            .eq("id", userId)
+            .single();
+
+        if (error) throw error;
+        return data;
     }
 };

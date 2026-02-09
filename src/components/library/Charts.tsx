@@ -17,7 +17,7 @@ import {
 } from "recharts";
 
 interface BaseChartProps {
-    data: any[];
+    data: Record<string, string | number>[];
     categories: string[];
     index: string;
     colors?: string[];
