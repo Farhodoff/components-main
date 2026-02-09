@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Search, Package, ChevronRight } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import {
@@ -37,6 +38,7 @@ const gettingStartedItems = [
 ];
 
 export function DocsSidebar() {
+  const { t } = useTranslation();
   const { state } = useSidebar();
   const collapsed = state === "collapsed";
 
@@ -44,7 +46,7 @@ export function DocsSidebar() {
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredComponents = componentItems.filter((item) =>
-    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+    t(`sidebar.items.${item.title}`).toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const groupedComponents = filteredComponents.reduce((acc, item) => {
@@ -73,7 +75,7 @@ export function DocsSidebar() {
         {!collapsed && (
           <div className="p-2">
             <LibraryInput
-              placeholder="Search components..."
+              placeholder={t("sidebar.searchPlaceholder", "Search components...")}
               leftIcon={<Search className="h-4 w-4" />}
               inputSize="sm"
               value={searchQuery}
@@ -84,7 +86,7 @@ export function DocsSidebar() {
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-2">
-            Getting Started
+            {t("sidebar.gettingStarted")}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -98,7 +100,7 @@ export function DocsSidebar() {
                       activeClassName="bg-primary/10 text-primary font-medium"
                     >
                       <ChevronRight className="h-3 w-3" />
-                      {!collapsed && <span>{item.title}</span>}
+                      {!collapsed && <span>{t(`sidebar.items.${item.title}`)}</span>}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -110,7 +112,7 @@ export function DocsSidebar() {
         {Object.entries(groupedComponents).map(([category, items]) => (
           <SidebarGroup key={category}>
             <SidebarGroupLabel className="text-xs font-semibold text-muted-foreground uppercase tracking-wider px-2">
-              {category}
+              {t(`sidebar.categories.${category}`)}
             </SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
@@ -124,7 +126,7 @@ export function DocsSidebar() {
                         activeClassName="bg-primary/10 text-primary font-medium"
                       >
                         <ChevronRight className="h-3 w-3" />
-                        {!collapsed && <span>{item.title}</span>}
+                        {!collapsed && <span>{t(`sidebar.items.${item.title}`)}</span>}
                       </NavLink>
                     </SidebarMenuButton>
                   </SidebarMenuItem>

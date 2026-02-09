@@ -15,7 +15,38 @@
         "documentation": "Documentation",
         "components": "Components",
         "themes": "Themes",
-        "github": "GitHub"
+        "github": "GitHub",
+        "signIn": "Sign In",
+        "logOut": "Log out",
+        "profile": "Profile"
+    },
+    "sidebar": {
+        "gettingStarted": "Getting Started",
+        "categories": {
+            "Form": "Form",
+            "Display": "Display",
+            "Feedback": "Feedback",
+            "Layout": "Layout",
+            "Library": "Library",
+            "Templates": "Templates"
+        },
+        "items": {
+            "Introduction": "Introduction",
+            "Installation": "Installation",
+            "Theming": "Theming",
+            "Button": "Button",
+            "Input": "Input",
+            "Badge": "Badge",
+            "Alert": "Alert",
+            "Card": "Card",
+            "Kanban Board": "Kanban Board",
+            "Charts & Analytics": "Charts & Analytics",
+            "Auth Templates": "Auth Templates",
+            "Project Board": "Project Board",
+            "Activity Feed": "Activity Feed",
+            "Chat Interface": "Chat Interface",
+            "Data Grid": "Data Grid"
+        }
     },
     "language": {
         "en": "English",

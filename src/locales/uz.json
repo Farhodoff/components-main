@@ -15,7 +15,38 @@
         "documentation": "Hujjatlar",
         "components": "Komponentlar",
         "themes": "Mavzular",
-        "github": "GitHub"
+        "github": "GitHub",
+        "signIn": "Kirish",
+        "logOut": "Chiqish",
+        "profile": "Profil"
+    },
+    "sidebar": {
+        "gettingStarted": "Boshlash",
+        "categories": {
+            "Form": "Forma",
+            "Display": "Ko'rinish",
+            "Feedback": "Qayta Aloqa",
+            "Layout": "Tuzilish",
+            "Library": "Kutubxona",
+            "Templates": "Andozalar"
+        },
+        "items": {
+            "Introduction": "Kirish",
+            "Installation": "O'rnatish",
+            "Theming": "Mavzular",
+            "Button": "Tugma",
+            "Input": "Kiritish",
+            "Badge": "Belgi",
+            "Alert": "Ogohlantirish",
+            "Card": "Karta",
+            "Kanban Board": "Kanban Doskasi",
+            "Charts & Analytics": "Diagramma va Tahlil",
+            "Auth Templates": "Auth Andozalari",
+            "Project Board": "Loyiha Doskasi",
+            "Activity Feed": "Faoliyat Tasmasi",
+            "Chat Interface": "Chat Interfeysi",
+            "Data Grid": "Ma'lumotlar Jadvali"
+        }
     },
     "language": {
         "en": "English",

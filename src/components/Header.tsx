@@ -125,13 +125,13 @@ export const Header: React.FC = () => {
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleSignOut}>
-                  Log out
+                  {t("nav.logOut")}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
             <Button variant="default" size="sm" asChild>
-              <Link to="/auth">Sign In</Link>
+              <Link to="/auth">{t("nav.signIn")}</Link>
             </Button>
           )}
         </div>
