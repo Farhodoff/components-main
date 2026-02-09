@@ -10,6 +10,7 @@ import { InstallationDocs } from "@/components/docs/InstallationDocs";
 import { ThemingDocs } from "@/components/docs/ThemingDocs";
 import { DocsLayout } from "@/components/layout/DocsLayout";
 import { DocsSidebar } from "@/components/docs/DocsSidebar";
+import { KanbanDocs } from "@/components/docs/KanbanDocs";
 
 const componentMap: Record<string, React.FC> = {
   button: ButtonDocs,
@@ -17,6 +18,7 @@ const componentMap: Record<string, React.FC> = {
   badge: BadgeDocs,
   alert: AlertDocs,
   card: CardDocs,
+  kanban: KanbanDocs,
 };
 
 const Docs: React.FC = () => {
