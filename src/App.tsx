@@ -8,6 +8,10 @@ import { GlobalErrorBoundary } from "@/components/ui/error-boundary";
 import Index from "./pages/Index";
 import Docs from "./pages/Docs";
 import NotFound from "./pages/NotFound";
+import LandingPage from "./pages/templates/LandingPage";
+import DashboardPage from "./pages/templates/DashboardPage";
+import SettingsPage from "./pages/templates/SettingsPage";
+import AuthPage from "./pages/templates/AuthPage";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +27,13 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/docs" element={<Docs />} />
               <Route path="/docs/:component" element={<Docs />} />
+
+              {/* Template Routes */}
+              <Route path="/templates/landing" element={<LandingPage />} />
+              <Route path="/templates/dashboard" element={<DashboardPage />} />
+              <Route path="/templates/settings" element={<SettingsPage />} />
+              <Route path="/templates/auth" element={<AuthPage />} />
+
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
