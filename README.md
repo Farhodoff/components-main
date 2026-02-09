@@ -88,10 +88,10 @@ pnpm build
 The library comes with pre-built page templates. You can import them directly:
 
 ```tsx
-import { AnalyticsDashboard } from '@farhod_dev/super-ui/templates';
-import { HeroSection } from '@farhod_dev/super-ui/templates';
-import { ProjectBoard } from '@farhod_dev/super-ui/templates';
-import { ChatInterface } from '@farhod_dev/super-ui/templates';
+import { AnalyticsDashboard } from '@farhod_dev/super-ui';
+import { HeroSection } from '@farhod_dev/super-ui';
+import { ProjectBoard } from '@farhod_dev/super-ui';
+import { ChatInterface } from '@farhod_dev/super-ui';
 
 function MyPage() {
     return (

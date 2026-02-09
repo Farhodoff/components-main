@@ -48,6 +48,10 @@ export * from './components/templates/LandingSections';
 export * from './components/templates/SettingsLayout';
 export * from './components/templates/DataGridLayout';
 export * from './components/templates/ErrorPages';
+export * from './components/templates/AnalyticsDashboard';
+export * from './components/templates/ProjectBoard';
+export * from './components/templates/ActivityFeed';
+export * from './components/templates/ChatInterface';
 
 export * from './components/theme-provider';
 export { default as i18n } from './i18n';
