@@ -13,6 +13,7 @@ import { DocsSidebar } from "@/components/docs/DocsSidebar";
 import { KanbanDocs } from "@/components/docs/KanbanDocs";
 import { ChartsDocs } from "@/components/docs/ChartsDocs";
 import { AuthDocs } from "@/components/docs/AuthDocs";
+import { DataGridDocs } from "@/components/docs/DataGridDocs";
 
 const componentMap: Record<string, React.FC> = {
   button: ButtonDocs,
@@ -23,6 +24,7 @@ const componentMap: Record<string, React.FC> = {
   kanban: KanbanDocs,
   charts: ChartsDocs,
   auth: AuthDocs,
+  datagrid: DataGridDocs,
 };
 
 const Docs: React.FC = () => {

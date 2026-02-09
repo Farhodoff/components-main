@@ -24,6 +24,7 @@ const componentItems = [
   { title: "Kanban Board", url: "/docs/kanban", category: "Library" },
   { title: "Charts & Analytics", url: "/docs/charts", category: "Library" },
   { title: "Auth Templates", url: "/docs/auth", category: "Templates" },
+  { title: "Data Grid", url: "/docs/datagrid", category: "Library" },
 ];
 
 const gettingStartedItems = [
