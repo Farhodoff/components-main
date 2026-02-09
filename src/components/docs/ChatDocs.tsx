@@ -71,25 +71,25 @@ function App() {
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">1</span>
                                 <div>
-                                    <strong className="text-foreground">Sidebar Contact List:</strong> {t("docs.chat.features.sidebar").split(":")[1]}
+                                    {t("docs.chat.features.sidebar")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">2</span>
                                 <div>
-                                    <strong className="text-foreground">Message Area:</strong> {t("docs.chat.features.messageArea").split(":")[1]}
+                                    {t("docs.chat.features.messageArea")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">3</span>
                                 <div>
-                                    <strong className="text-foreground">ScrollArea Integration:</strong> {t("docs.chat.features.scrollArea").split(":")[1]}
+                                    {t("docs.chat.features.scrollArea")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">4</span>
                                 <div>
-                                    <strong className="text-foreground">Responsive:</strong> {t("docs.chat.features.responsive").split(":")[1]}
+                                    {t("docs.chat.features.responsive")}
                                 </div>
                             </li>
                         </ul>

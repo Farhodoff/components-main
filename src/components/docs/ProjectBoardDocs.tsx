@@ -70,25 +70,25 @@ function App() {
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">1</span>
                                 <div>
-                                    <strong className="text-foreground">Drag & Drop:</strong> {t("docs.projectBoard.features.dragDrop").split(":")[1]}
+                                    {t("docs.projectBoard.features.dragDrop")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">2</span>
                                 <div>
-                                    <strong className="text-foreground">Optimistic UI:</strong> {t("docs.projectBoard.features.optimisticUi").split(":")[1]}
+                                    {t("docs.projectBoard.features.optimisticUi")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">3</span>
                                 <div>
-                                    <strong className="text-foreground">Column Management:</strong> {t("docs.projectBoard.features.columns").split(":")[1]}
+                                    {t("docs.projectBoard.features.columns")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">4</span>
                                 <div>
-                                    <strong className="text-foreground">Responsive:</strong> {t("docs.projectBoard.features.responsive").split(":")[1]}
+                                    {t("docs.projectBoard.features.responsive")}
                                 </div>
                             </li>
                         </ul>

@@ -51,5 +51,99 @@
     "language": {
         "en": "English",
         "uz": "O'zbekcha"
+    },
+    "docs": {
+        "interactiveDemo": "Interaktiv Demo",
+        "usageCode": "Foydalanish Kodi",
+        "copyCode": "Kodni Nusxalash",
+        "keyFeatures": "Asosiy Xususiyatlar",
+        "openInNewTab": "Yangi oynada ochish",
+        "chat": {
+            "title": "Chat Interfeysi Andozasi",
+            "description": "Kontaktlar ro'yxati va xabar almashish maydoniga ega zamonaviy, moslashuvchan chat ilovasi. Xabar almashish ilovalari yoki qo'llab-quvvatlash chat vositalarini yaratish uchun juda mos keladi.",
+            "features": {
+                "sidebar": "Kontaktlar Ro'yxati: Onlayn holat ko'rsatkichlari bilan qidiriladigan foydalanuvchilar ro'yxati.",
+                "messageArea": "Xabar Maydoni: Kiruvchi va chiquvchi xabarlar uchun alohida uslublar.",
+                "scrollArea": "ScrollArea Integratsiyasi: Ilovaga xos sezgi uchun maxsus aylantirish chiziqlari.",
+                "responsive": "Moslashuvchan: Yon panel mobil ekranlarga moslashadi."
+            }
+        },
+        "projectBoard": {
+            "title": "Loyiha Doskasi Andozasi",
+            "description": "Vazifalarni boshqarish uchun to'liq funksional Kanban doskasi. Vazifalarni sudrab tashlang, ish jarayoningizni tashkil qiling va loyiha rivojlanishini oson boshqaring.",
+            "features": {
+                "dragDrop": "Sudrab Tashlash: @dnd-kit yordamida qulay sudrab tashlash o'zaro ta'siri uchun qurilgan.",
+                "optimisticUi": "Optimistik UI: Yaxshiroq foydalanuvchi tajribasi uchun holatni darhol yangilash.",
+                "columns": "Ustunlarni Boshqarish: Kengaytirilishi mumkin bo'lgan oldindan sozlangan holatlar (Qilish Kerak, Jarayonda, Bajarildi).",
+                "responsive": "Moslashuvchan: Kompyuter va planshet qurilmalarida ishlaydi."
+            }
+        },
+        "activityFeed": {
+            "title": "Faoliyat Tasmasi Andozasi",
+            "description": "Moslashuvchan vaqt o'qi va faoliyat tasmasi andozasi. Foydalanuvchi tarixi, o'zgarishlar jurnali yoki tizim bildirishnomalarini ko'rsatish uchun ideal.",
+            "features": {
+                "timeline": "Vaqt O'qi Tuzilishi: Nuqtalar va chiziqlar bilan bog'langan vertikal vaqt o'qi.",
+                "richContent": "Boy Tarkib: Belgilar, sarlavhalar, sanalar, tavsiflar va harakatga chaqiruvchi tugmalarni qo'llab-quvvatlaydi.",
+                "filters": "Filtrlar: Filtr opsiyalari bilan yon panel (Barcha Faoliyat, Eslatmalar va boshqalar).",
+                "responsive": "Moslashuvchan: Turli ekran o'lchamlariga moslashadi."
+            }
+        },
+        "auth": {
+            "title": "Autentifikatsiya Andozalari",
+            "description": "react-hook-form va zod yordamida tayyorlangan, moslashuvchan kirish va ro'yxatdan o'tish shakllari. Validatsiya, xatolarni qayta ishlash va soxta Supabase integratsiyasini o'z ichiga oladi.",
+            "loginPage": "Kirish Sahifasi",
+            "registerPage": "Ro'yxatdan O'tish Sahifasi",
+            "features": {
+                "validation": "Forma Validatsiyasi: Ishonchli ma'lumotlarni qayta ishlash uchun zod sxemalari yordamida o'rnatilgan validatsiya.",
+                "state": "Holat Integratsiyasi: Samarali forma holatini boshqarish uchun react-hook-form dan foydalanadi.",
+                "supabase": "Supabase Tayyor: Supabase autentifikatsiya usullari uchun oldindan sozlangan asinxron ishlov beruvchilar.",
+                "responsive": "Moslashuvchan Dizayn: Barcha qurilma o'lchamlariga moslashadigan to'liq moslashuvchan tuzilmalar."
+            }
+        }
+    },
+    "templates": {
+        "chat": {
+            "searchMessages": "Xabarlarni qidirish...",
+            "typeMessage": "Xabar yozing..."
+        },
+        "projectBoard": {
+            "title": "Loyiha Doskasi",
+            "subtitle": "Vazifalaringizni boshqaring va rivojlanishni kuzating.",
+            "newIssue": "Yangi Vazifa"
+        },
+        "activityFeed": {
+            "title": "Faoliyat Tasmasi",
+            "subtitle": "Platformadagi so'nggi harakatlar va yangilanishlar.",
+            "recentActivity": "So'nggi Faoliyat",
+            "unread": "Sizda {{count}} ta o'qilmagan bildirishnoma bor.",
+            "filters": "Filtrlar",
+            "type": "Tur",
+            "all": "Barchasi",
+            "commits": "Commitlar",
+            "releases": "Relizlar",
+            "users": "Foydalanuvchilar"
+        },
+        "auth": {
+            "loginTitle": "Kirish",
+            "loginSubtitle": "Hisobingizga kirish uchun quyida elektron pochtangizni kiriting",
+            "loginGithub": "GitHub orqali kirish",
+            "orContinue": "Yoki davom eting",
+            "emailLabel": "Elektron pochta",
+            "passwordLabel": "Parol",
+            "forgotPassword": "Parolni unutdingizmi?",
+            "rememberMe": "Eslab qolish",
+            "loginButton": "Kirish",
+            "loggingIn": "Kirilmoqda...",
+            "noAccount": "Hisobingiz yo'qmi?",
+            "signUp": "Ro'yxatdan o'tish",
+            "signUpTitle": "Ro'yxatdan O'tish",
+            "signUpSubtitle": "Hisob yaratish uchun ma'lumotlaringizni kiriting",
+            "signUpGithub": "GitHub orqali ro'yxatdan o'tish",
+            "fullNameLabel": "To'liq Ism",
+            "createAccount": "Hisob yaratish",
+            "creatingAccount": "Hisob yaratilmoqda...",
+            "alreadyAccount": "Allaqachon hisobingiz bormi?",
+            "signIn": "Kirish"
+        }
     }
 }

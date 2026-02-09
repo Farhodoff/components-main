@@ -68,19 +68,19 @@ function App() {
                             <li className="flex items-start gap-2">
                                 <span className="bg-primary/10 text-primary p-1 rounded mt-0.5">✓</span>
                                 <div>
-                                    <strong>Timeline Layout:</strong> {t("docs.activityFeed.features.timeline").split(":")[1]}
+                                    {t("docs.activityFeed.features.timeline")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="bg-primary/10 text-primary p-1 rounded mt-0.5">✓</span>
                                 <div>
-                                    <strong>Rich Content:</strong> {t("docs.activityFeed.features.richContent").split(":")[1]}
+                                    {t("docs.activityFeed.features.richContent")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-2">
                                 <span className="bg-primary/10 text-primary p-1 rounded mt-0.5">✓</span>
                                 <div>
-                                    <strong>Filters:</strong> {t("docs.activityFeed.features.filters").split(":")[1]}
+                                    {t("docs.activityFeed.features.filters")}
                                 </div>
                             </li>
                         </ul>

@@ -104,25 +104,25 @@ function App() {
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">1</span>
                                 <div>
-                                    <strong className="text-foreground">Form Validation:</strong> {t("docs.auth.features.validation").split(":")[1]}
+                                    {t("docs.auth.features.validation")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">2</span>
                                 <div>
-                                    <strong className="text-foreground">State Integration:</strong> {t("docs.auth.features.state").split(":")[1]}
+                                    {t("docs.auth.features.state")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">3</span>
                                 <div>
-                                    <strong className="text-foreground">Supabase Ready:</strong> {t("docs.auth.features.supabase").split(":")[1]}
+                                    {t("docs.auth.features.supabase")}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">4</span>
                                 <div>
-                                    <strong className="text-foreground">Responsive Design:</strong> {t("docs.auth.features.responsive").split(":")[1]}
+                                    {t("docs.auth.features.responsive")}
                                 </div>
                             </li>
                         </ul>

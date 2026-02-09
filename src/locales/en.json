@@ -51,5 +51,99 @@
     "language": {
         "en": "English",
         "uz": "O'zbekcha"
+    },
+    "docs": {
+        "interactiveDemo": "Interactive Demo",
+        "usageCode": "Usage Code",
+        "copyCode": "Copy Code",
+        "keyFeatures": "Key Features",
+        "openInNewTab": "Open in New Tab",
+        "chat": {
+            "title": "Chat Interface Template",
+            "description": "A modern, responsive chat application layout with contact list and message area. Perfect for building messaging apps or support chat tools.",
+            "features": {
+                "sidebar": "Sidebar Contact List: Searchable user list with online status indicators.",
+                "messageArea": "Message Area: Distinct styles for incoming and outgoing messages.",
+                "scrollArea": "ScrollArea Integration: Uses custom scrollbars for a native app feel.",
+                "responsive": "Responsive: Sidebar adapts to mobile screens."
+            }
+        },
+        "projectBoard": {
+            "title": "Project Board Template",
+            "description": "A fully functional Kanban board for task management. Drag and drop tasks, organize your workflow, and manage project progress effortlessly.",
+            "features": {
+                "dragDrop": "Drag & Drop: Built with @dnd-kit for smooth accessible drag-and-drop interactions.",
+                "optimisticUi": "Optimistic UI: Instant state updates for better user experience.",
+                "columns": "Column Management: Pre-configured statuses (ToDo, In Progress, Done) that can be extended.",
+                "responsive": "Responsive: Works on desktop and tablet devices."
+            }
+        },
+        "activityFeed": {
+            "title": "Activity Feed Template",
+            "description": "A responsive timeline and activity feed template. Ideal for displaying user history, changelogs, or system notifications.",
+            "features": {
+                "timeline": "Timeline Layout: Vertical timeline with connected dots and lines.",
+                "richContent": "Rich Content: Support for icons, titles, dates, descriptions, and call-to-action buttons.",
+                "filters": "Filters: Sidebar with filter options (All Activity, Mentions, etc.).",
+                "responsive": "Responsive: Adapts to different screen sizes."
+            }
+        },
+        "auth": {
+            "title": "Authentication Templates",
+            "description": "Pre-built, responsive login and registration forms using react-hook-form and zod. Includes validation, error handling, and mock Supabase integration.",
+            "loginPage": "Login Page",
+            "registerPage": "Register Page",
+            "features": {
+                "validation": "Form Validation: Built-in validation using zod schemas for robust data handling.",
+                "state": "State Integration: Uses react-hook-form for efficient form state management.",
+                "supabase": "Supabase Ready: Pre-configured async handlers for Supabase authentication methods.",
+                "responsive": "Responsive Design: Fully responsive layouts that adapt to all device sizes."
+            }
+        }
+    },
+    "templates": {
+        "chat": {
+            "searchMessages": "Search messages...",
+            "typeMessage": "Type a message..."
+        },
+        "projectBoard": {
+            "title": "Project Board",
+            "subtitle": "Manage your tasks and track progress.",
+            "newIssue": "New Issue"
+        },
+        "activityFeed": {
+            "title": "Activity Feed",
+            "subtitle": "Recent actions and updates across the platform.",
+            "recentActivity": "Recent Activity",
+            "unread": "You have {{count}} unread notifications.",
+            "filters": "Filters",
+            "type": "Type",
+            "all": "All",
+            "commits": "Commits",
+            "releases": "Releases",
+            "users": "Users"
+        },
+        "auth": {
+            "loginTitle": "Login",
+            "loginSubtitle": "Enter your email below to login to your account",
+            "loginGithub": "Login with GitHub",
+            "orContinue": "Or continue with",
+            "emailLabel": "Email",
+            "passwordLabel": "Password",
+            "forgotPassword": "Forgot your password?",
+            "rememberMe": "Remember me",
+            "loginButton": "Login",
+            "loggingIn": "Logging in...",
+            "noAccount": "Don't have an account?",
+            "signUp": "Sign up",
+            "signUpTitle": "Sign Up",
+            "signUpSubtitle": "Enter your information to create an account",
+            "signUpGithub": "Sign up with GitHub",
+            "fullNameLabel": "Full Name",
+            "createAccount": "Create an account",
+            "creatingAccount": "Creating account...",
+            "alreadyAccount": "Already have an account?",
+            "signIn": "Sign in"
+        }
     }
 }
