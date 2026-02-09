@@ -22,6 +22,7 @@ const componentItems = [
   { title: "Alert", url: "/docs/alert", category: "Feedback" },
   { title: "Card", url: "/docs/card", category: "Layout" },
   { title: "Kanban Board", url: "/docs/kanban", category: "Library" },
+  { title: "Charts & Analytics", url: "/docs/charts", category: "Library" },
 ];
 
 const gettingStartedItems = [
