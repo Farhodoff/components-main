@@ -53,6 +53,17 @@ pnpm add @farhod_dev/super-ui
 yarn add @farhod_dev/super-ui
 ```
 
+### Configuration
+Create a `.env` file in the root directory:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+### Database Setup
+This project requires Supabase tables. Run the SQL commands provided in [SCHEMA.md](./SCHEMA.md) to set up your database.
+
 ### Development
 
 ```bash
@@ -71,6 +82,26 @@ pnpm exec playwright test
 # Build for production
 pnpm build
 ```
+
+## 📄 Using Templates
+
+The library comes with pre-built page templates. You can import them directly:
+
+```tsx
+import { AnalyticsDashboard } from '@farhod_dev/super-ui/templates';
+import { HeroSection } from '@farhod_dev/super-ui/templates';
+
+function MyPage() {
+    return (
+        <div>
+           <HeroSection title="My Awesome App" />
+           <AnalyticsDashboard />
+        </div>
+    )
+}
+```
+
+See `src/pages/templates` for full implementation examples.
 
 ## 📦 Using as a Library
 
