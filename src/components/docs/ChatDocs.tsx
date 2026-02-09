@@ -1,10 +1,12 @@
 import React from "react";
 import { Copy } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChatInterface } from "@/components/templates/ChatInterface";
 
 export const ChatDocs: React.FC = () => {
+    const { t } = useTranslation();
     const codeExample = `import { ChatInterface } from '@farhod_dev/super-ui';
 
 function App() {
@@ -24,16 +26,15 @@ function App() {
         <div className="w-full max-w-[1400px] mx-auto p-6 space-y-10">
             {/* Header Section */}
             <div>
-                <h1 className="text-3xl font-bold mb-4">Chat Interface Template</h1>
+                <h1 className="text-3xl font-bold mb-4">{t("docs.chat.title")}</h1>
                 <p className="text-lg text-muted-foreground mb-6 max-w-3xl">
-                    A modern, responsive chat application layout with contact list and message area.
-                    Perfect for building messaging apps or support chat tools.
+                    {t("docs.chat.description")}
                 </p>
             </div>
 
             {/* Interactive Demo Section - Full Width */}
             <div className="space-y-4">
-                <h2 className="text-2xl font-semibold">Interactive Demo</h2>
+                <h2 className="text-2xl font-semibold">{t("docs.interactiveDemo")}</h2>
                 <div className="border rounded-xl overflow-hidden h-[700px] shadow-lg flex flex-col bg-background ring-1 ring-slate-200 dark:ring-slate-800">
                     <ChatInterface />
                 </div>
@@ -44,7 +45,7 @@ function App() {
                 {/* Usage Code */}
                 <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                        <h2 className="text-xl font-semibold">Usage Code</h2>
+                        <h2 className="text-xl font-semibold">{t("docs.usageCode")}</h2>
                         <Button
                             variant="outline"
                             size="sm"
@@ -52,7 +53,7 @@ function App() {
                             className="gap-2"
                         >
                             <Copy className="h-4 w-4" />
-                            Copy Code
+                            {t("docs.copyCode")}
                         </Button>
                     </div>
                     <Card className="bg-slate-950 text-slate-50 p-6 relative overflow-hidden rounded-xl">
@@ -64,31 +65,31 @@ function App() {
 
                 {/* Features List */}
                 <div className="space-y-4">
-                    <h2 className="text-xl font-semibold">Key Features</h2>
+                    <h2 className="text-xl font-semibold">{t("docs.keyFeatures")}</h2>
                     <Card className="p-6">
                         <ul className="grid grid-cols-1 gap-4 text-muted-foreground">
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">1</span>
                                 <div>
-                                    <strong className="text-foreground">Sidebar Contact List:</strong> Searchable user list with online status indicators.
+                                    <strong className="text-foreground">Sidebar Contact List:</strong> {t("docs.chat.features.sidebar").split(":")[1]}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">2</span>
                                 <div>
-                                    <strong className="text-foreground">Message Area:</strong> Distinct styles for incoming and outgoing messages.
+                                    <strong className="text-foreground">Message Area:</strong> {t("docs.chat.features.messageArea").split(":")[1]}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">3</span>
                                 <div>
-                                    <strong className="text-foreground">ScrollArea Integration:</strong> Uses custom scrollbars for a native app feel.
+                                    <strong className="text-foreground">ScrollArea Integration:</strong> {t("docs.chat.features.scrollArea").split(":")[1]}
                                 </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary text-xs font-bold">4</span>
                                 <div>
-                                    <strong className="text-foreground">Responsive:</strong> Sidebar adapts to mobile screens.
+                                    <strong className="text-foreground">Responsive:</strong> {t("docs.chat.features.responsive").split(":")[1]}
                                 </div>
                             </li>
                         </ul>

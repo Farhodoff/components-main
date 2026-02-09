@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Send, Phone, Video, MoreVertical, Search } from "lucide-react";
+import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 
 const contacts = [
@@ -24,6 +25,7 @@ const messages = [
 ];
 
 export const ChatInterface: React.FC = () => {
+    const { t } = useTranslation();
     const [selectedContact, setSelectedContact] = useState(contacts[0]);
     const [inputValue, setInputValue] = useState("");
 
@@ -34,7 +36,7 @@ export const ChatInterface: React.FC = () => {
                 <div className="p-4 border-b">
                     <div className="relative">
                         <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
-                        <Input placeholder="Search messages..." className="pl-8" />
+                        <Input placeholder={t("templates.chat.searchMessages")} className="pl-8" />
                     </div>
                 </div>
                 <ScrollArea className="flex-1">
@@ -140,7 +142,7 @@ export const ChatInterface: React.FC = () => {
                 <div className="p-4 border-t bg-background">
                     <div className="flex gap-2">
                         <Input
-                            placeholder="Type a message..."
+                            placeholder={t("templates.chat.typeMessage")}
                             value={inputValue}
                             onChange={(e) => setInputValue(e.target.value)}
                             onKeyDown={(e) => {
