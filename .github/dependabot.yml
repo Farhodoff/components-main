@@ -14,6 +14,8 @@ updates:
     commit-message:
       prefix: "chore(deps)"
       include: "scope"
+    ignore:
+      - dependency-name: "date-fns"
 
   # Enable version updates for GitHub Actions
   - package-ecosystem: "github-actions"
