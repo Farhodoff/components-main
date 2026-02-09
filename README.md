@@ -189,6 +189,17 @@ src/
 └── locales/             # i18n translations (en, uz)
 ```
 
+## 🚀 NPM Avtomatlashtirish
+Bu loyihada NPM ga avtomatik yuklash uchun GitHub Action sozlangan.
+
+### Sozlash
+1. GitHub repozitoriysingizdagi **Settings -> Secrets and variables -> Actions** bo'limiga kiring.
+2. `NPM_TOKEN` nomli yangi secret yarating va unga NPM tokeningizni joylang.
+3. O'zgarishlarni yuklang (Push).
+4. "Release" jarayoni avtomatik ishga tushadi:
+    - Versiyani yangilash uchun Pull Request (PR) yaratadi.
+    - Agar PR qabul qilinsa (Merge), yangi versiya avtomatik NPM ga yuklanadi.
+
 ## 🌍 Internationalization
 
 The library includes built-in support for multiple languages using i18next:
