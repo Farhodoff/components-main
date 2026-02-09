@@ -12,6 +12,9 @@ import LandingPage from "./pages/templates/LandingPage";
 import DashboardPage from "./pages/templates/DashboardPage";
 import SettingsPage from "./pages/templates/SettingsPage";
 import AuthPage from "./pages/templates/AuthPage";
+import ProjectBoardPage from "./pages/templates/ProjectBoardPage";
+import ActivityFeedPage from "./pages/templates/ActivityFeedPage";
+import ChatPage from "./pages/templates/ChatPage";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +36,9 @@ const App = () => (
               <Route path="/templates/dashboard" element={<DashboardPage />} />
               <Route path="/templates/settings" element={<SettingsPage />} />
               <Route path="/templates/auth" element={<AuthPage />} />
+              <Route path="/templates/project-board" element={<ProjectBoardPage />} />
+              <Route path="/templates/activity-feed" element={<ActivityFeedPage />} />
+              <Route path="/templates/chat" element={<ChatPage />} />
 
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

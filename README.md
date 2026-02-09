@@ -90,16 +90,29 @@ The library comes with pre-built page templates. You can import them directly:
 ```tsx
 import { AnalyticsDashboard } from '@farhod_dev/super-ui/templates';
 import { HeroSection } from '@farhod_dev/super-ui/templates';
+import { ProjectBoard } from '@farhod_dev/super-ui/templates';
+import { ChatInterface } from '@farhod_dev/super-ui/templates';
 
 function MyPage() {
     return (
         <div>
            <HeroSection title="My Awesome App" />
            <AnalyticsDashboard />
+           <ProjectBoard />
+           <ChatInterface />
         </div>
     )
 }
 ```
+
+### Available Templates
+- **Landing Page**: `/templates/landing`
+- **Dashboard**: `/templates/dashboard`
+- **Settings**: `/templates/settings`
+- **Auth**: `/templates/auth`
+- **Project Board**: `/templates/project-board`
+- **Activity Feed**: `/templates/activity-feed`
+- **Chat**: `/templates/chat`
 
 See `src/pages/templates` for full implementation examples.
 
