@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { LibraryBadge } from "./library/LibraryBadge";
 import { BookOpen, Github, Package } from "lucide-react";
 import { LanguageSwitcher } from "./ui/language-switcher";
+import { ThemeCustomizer } from "./ui/theme-customizer";
 
 export const Header: React.FC = () => {
   const { t } = useTranslation();
@@ -42,6 +43,7 @@ export const Header: React.FC = () => {
           </a>
         </nav>
         <div className="flex items-center gap-3">
+          <ThemeCustomizer />
           <LanguageSwitcher />
           <Button variant="ghost" size="icon" asChild aria-label={t("nav.documentation")}>
             <Link to="/docs">

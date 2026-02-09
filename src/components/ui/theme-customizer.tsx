@@ -68,6 +68,14 @@ const themes = [
             dark: "263.4 70% 50.4%",
         },
     },
+    {
+        name: "Premium",
+        label: "Premium",
+        activeColor: {
+            light: "45 90% 50%",
+            dark: "45 90% 50%",
+        },
+    },
 ];
 
 export function ThemeCustomizer() {
@@ -82,6 +90,14 @@ export function ThemeCustomizer() {
 
     React.useEffect(() => {
         const root = window.document.documentElement;
+
+        // Handle Premium theme class
+        if (color === "Premium") {
+            root.classList.add("theme-premium");
+        } else {
+            root.classList.remove("theme-premium");
+        }
+
         const selectedTheme = themes.find((t) => t.name === color);
         if (selectedTheme) {
             // Logic to update --primary would go here if we were using a real CSS-in-JS or writing to style
