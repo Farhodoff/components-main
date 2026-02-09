@@ -12,6 +12,7 @@ import { DocsLayout } from "@/components/layout/DocsLayout";
 import { DocsSidebar } from "@/components/docs/DocsSidebar";
 import { KanbanDocs } from "@/components/docs/KanbanDocs";
 import { ChartsDocs } from "@/components/docs/ChartsDocs";
+import { AuthDocs } from "@/components/docs/AuthDocs";
 
 const componentMap: Record<string, React.FC> = {
   button: ButtonDocs,
@@ -21,6 +22,7 @@ const componentMap: Record<string, React.FC> = {
   card: CardDocs,
   kanban: KanbanDocs,
   charts: ChartsDocs,
+  auth: AuthDocs,
 };
 
 const Docs: React.FC = () => {
