@@ -17,6 +17,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 import { Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 // Form Schema
 const loginSchema = z.object({
@@ -28,6 +29,7 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginTemplate() {
+    const { t } = useTranslation();
     const [isLoading, setIsLoading] = useState(false);
 
     const form = useForm<LoginFormValues>({
@@ -65,16 +67,16 @@ export function LoginTemplate() {
             <div className="flex items-center justify-center py-12">
                 <div className="mx-auto grid w-[350px] gap-6">
                     <div className="grid gap-2 text-center">
-                        <h1 className="text-3xl font-bold">Login</h1>
+                        <h1 className="text-3xl font-bold">{t("templates.auth.loginTitle")}</h1>
                         <p className="text-balance text-muted-foreground">
-                            Enter your email below to login to your account
+                            {t("templates.auth.loginSubtitle")}
                         </p>
                     </div>
 
                     <div className="grid gap-4">
                         <Button variant="outline" className="w-full">
                             <Github className="mr-2 h-4 w-4" />
-                            Login with GitHub
+                            {t("templates.auth.loginGithub")}
                         </Button>
                         <div className="relative">
                             <div className="absolute inset-0 flex items-center">
@@ -82,7 +84,7 @@ export function LoginTemplate() {
                             </div>
                             <div className="relative flex justify-center text-xs uppercase">
                                 <span className="bg-background px-2 text-muted-foreground">
-                                    Or continue with
+                                    {t("templates.auth.orContinue")}
                                 </span>
                             </div>
                         </div>
@@ -95,7 +97,7 @@ export function LoginTemplate() {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Email</FormLabel>
+                                        <FormLabel>{t("templates.auth.emailLabel")}</FormLabel>
                                         <FormControl>
                                             <Input placeholder="m@example.com" {...field} />
                                         </FormControl>
@@ -109,13 +111,13 @@ export function LoginTemplate() {
                                 render={({ field }) => (
                                     <FormItem>
                                         <div className="flex items-center">
-                                            <FormLabel>Password</FormLabel>
+                                            <FormLabel>{t("templates.auth.passwordLabel")}</FormLabel>
                                             <a
                                                 href="#"
                                                 className="ml-auto inline-block text-sm underline"
                                                 onClick={(e) => e.preventDefault()}
                                             >
-                                                Forgot your password?
+                                                {t("templates.auth.forgotPassword")}
                                             </a>
                                         </div>
                                         <FormControl>
@@ -138,22 +140,22 @@ export function LoginTemplate() {
                                         </FormControl>
                                         <div className="space-y-1 leading-none">
                                             <FormLabel>
-                                                Remember me
+                                                {t("templates.auth.rememberMe")}
                                             </FormLabel>
                                         </div>
                                     </FormItem>
                                 )}
                             />
                             <Button type="submit" className="w-full" disabled={isLoading}>
-                                {isLoading ? "Logging in..." : "Login"}
+                                {isLoading ? t("templates.auth.loggingIn") : t("templates.auth.loginButton")}
                             </Button>
                         </form>
                     </Form>
 
                     <div className="mt-4 text-center text-sm">
-                        Don&apos;t have an account?{" "}
+                        {t("templates.auth.noAccount")}{" "}
                         <a href="#" className="underline" onClick={(e) => e.preventDefault()}>
-                            Sign up
+                            {t("templates.auth.signUp")}
                         </a>
                     </div>
                 </div>

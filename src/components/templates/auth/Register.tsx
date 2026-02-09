@@ -15,6 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 // Form Schema
 const registerSchema = z.object({
@@ -26,6 +27,7 @@ const registerSchema = z.object({
 type RegisterFormValues = z.infer<typeof registerSchema>;
 
 export function RegisterTemplate() {
+    const { t } = useTranslation();
     const [isLoading, setIsLoading] = useState(false);
 
     const form = useForm<RegisterFormValues>({
@@ -65,16 +67,16 @@ export function RegisterTemplate() {
     return (
         <Card className="mx-auto max-w-sm">
             <CardHeader>
-                <CardTitle className="text-2xl">Sign Up</CardTitle>
+                <CardTitle className="text-2xl">{t("templates.auth.signUpTitle")}</CardTitle>
                 <CardDescription>
-                    Enter your information to create an account
+                    {t("templates.auth.signUpSubtitle")}
                 </CardDescription>
             </CardHeader>
             <CardContent>
                 <div className="grid gap-4">
                     <Button variant="outline" className="w-full">
                         <Github className="mr-2 h-4 w-4" />
-                        Sign up with GitHub
+                        {t("templates.auth.signUpGithub")}
                     </Button>
                     <div className="relative">
                         <div className="absolute inset-0 flex items-center">
@@ -82,7 +84,7 @@ export function RegisterTemplate() {
                         </div>
                         <div className="relative flex justify-center text-xs uppercase">
                             <span className="bg-background px-2 text-muted-foreground">
-                                Or continue with
+                                {t("templates.auth.orContinue")}
                             </span>
                         </div>
                     </div>
@@ -94,7 +96,7 @@ export function RegisterTemplate() {
                                 name="name"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Full Name</FormLabel>
+                                        <FormLabel>{t("templates.auth.fullNameLabel")}</FormLabel>
                                         <FormControl>
                                             <Input placeholder="John Doe" {...field} />
                                         </FormControl>
@@ -107,7 +109,7 @@ export function RegisterTemplate() {
                                 name="email"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Email</FormLabel>
+                                        <FormLabel>{t("templates.auth.emailLabel")}</FormLabel>
                                         <FormControl>
                                             <Input placeholder="m@example.com" {...field} />
                                         </FormControl>
@@ -120,7 +122,7 @@ export function RegisterTemplate() {
                                 name="password"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>Password</FormLabel>
+                                        <FormLabel>{t("templates.auth.passwordLabel")}</FormLabel>
                                         <FormControl>
                                             <Input type="password" {...field} />
                                         </FormControl>
@@ -130,15 +132,15 @@ export function RegisterTemplate() {
                             />
 
                             <Button type="submit" className="w-full" disabled={isLoading}>
-                                {isLoading ? "Creating account..." : "Create an account"}
+                                {isLoading ? t("templates.auth.creatingAccount") : t("templates.auth.createAccount")}
                             </Button>
                         </form>
                     </Form>
 
                     <div className="mt-4 text-center text-sm">
-                        Already have an account?{" "}
+                        {t("templates.auth.alreadyAccount")}{" "}
                         <a href="#" className="underline" onClick={(e) => e.preventDefault()}>
-                            Sign in
+                            {t("templates.auth.signIn")}
                         </a>
                     </div>
                 </div>
