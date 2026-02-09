@@ -32,17 +32,12 @@ function App() {
 
                 {/* Right Column: Documentation & Code */}
                 <div className="space-y-8">
+                    {/* Header Section */}
                     <div>
                         <h1 className="text-3xl font-bold mb-4">Activity Feed Template</h1>
-                        <p className="text-lg text-muted-foreground mb-6">
+                        <p className="text-lg text-muted-foreground mb-6 max-w-3xl">
                             A responsive timeline and activity feed template. Ideal for displaying user history, changelogs, or system notifications.
                         </p>
-
-                        <div className="flex flex-wrap gap-4">
-                            <Button asChild variant="outline">
-                                <a href="/templates/activity-feed" target="_blank">Open Full Screen</a>
-                            </Button>
-                        </div>
                     </div>
 
                     <div className="space-y-4">

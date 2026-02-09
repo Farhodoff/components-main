@@ -28,11 +28,6 @@ function App() {
                     A fully functional Kanban board for task management.
                     Drag and drop tasks, organize your workflow, and manage project progress effortlessly.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                    <Button asChild>
-                        <a href="/templates/project-board" target="_blank">Open Full Screen Demo</a>
-                    </Button>
-                </div>
             </div>
 
             {/* Interactive Demo Section - Full Width */}

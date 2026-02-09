@@ -29,11 +29,6 @@ function App() {
                     A modern, responsive chat application layout with contact list and message area.
                     Perfect for building messaging apps or support chat tools.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                    <Button asChild>
-                        <a href="/templates/chat" target="_blank">Open Full Screen Demo</a>
-                    </Button>
-                </div>
             </div>
 
             {/* Interactive Demo Section - Full Width */}
