@@ -44,9 +44,11 @@ function generateApiTable(componentName: string, filePath: string): string | nul
     table += "| Prop | Type | Default | Description |\n";
     table += "|------|------|---------|-------------|\n";
 
-    const processProperty = (name: string, type: string, jsDocs: any[]) => {
-        const description = jsDocs.length > 0 ? jsDocs[0].getComment() : "-";
-        const defaultTag = jsDocs.length > 0 ? jsDocs[0].getTags().find((t: any) => t.getTagName() === "default") : null;
+    const processProperty = (name: string, type: string, jsDocs: unknown[]) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const description = jsDocs.length > 0 ? (jsDocs[0] as any).getComment() : "-";
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const defaultTag = jsDocs.length > 0 ? (jsDocs[0] as any).getTags().find((t: any) => t.getTagName() === "default") : null;
         const defaultValue = defaultTag ? defaultTag.getComment() : "-";
         table += `| \`${name}\` | \`${type.replace(/\|/g, "\\|").replace(/</g, "&lt;").replace(/>/g, "&gt;")}\` | ${defaultValue} | ${description} |\n`;
     };
@@ -57,9 +59,10 @@ function generateApiTable(componentName: string, filePath: string): string | nul
         });
     } else if (propsTypeAlias) {
         const typeNode = propsTypeAlias.getTypeNode();
-        // @ts-ignore
+
         if (typeNode && typeNode.getKind() === SyntaxKind.TypeLiteral) {
-            // @ts-ignore
+            // @ts-expect-error - typeNode members are complex to type strictly here
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             typeNode.getMembers().forEach((member: any) => {
                 if (member.getName) {
                     processProperty(member.getName(), member.getType().getText(undefined, TypeFormatFlags.NoTruncation), member.getJsDocs());

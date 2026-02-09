@@ -37,7 +37,7 @@ const badgeVariants = cva(
 
 export interface LibraryBadgeProps
   extends React.HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof badgeVariants> {
+  VariantProps<typeof badgeVariants> {
   icon?: React.ReactNode;
   removable?: boolean;
   onRemove?: () => void;
@@ -83,4 +83,5 @@ const LibraryBadge = React.forwardRef<HTMLSpanElement, LibraryBadgeProps>(
 );
 LibraryBadge.displayName = "LibraryBadge";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { LibraryBadge, badgeVariants };

@@ -34,7 +34,7 @@ const iconMap = {
 
 export interface LibraryAlertProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof alertVariants> {
+  VariantProps<typeof alertVariants> {
   title?: string;
   dismissible?: boolean;
   onDismiss?: () => void;
@@ -97,4 +97,5 @@ const LibraryAlert = React.forwardRef<HTMLDivElement, LibraryAlertProps>(
 );
 LibraryAlert.displayName = "LibraryAlert";
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { LibraryAlert, alertVariants };
