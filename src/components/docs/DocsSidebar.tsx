@@ -24,9 +24,9 @@ const componentItems = [
   { title: "Kanban Board", url: "/docs/kanban", category: "Library" },
   { title: "Charts & Analytics", url: "/docs/charts", category: "Library" },
   { title: "Auth Templates", url: "/docs/auth", category: "Templates" },
-  { title: "Project Board", url: "/templates/project-board", category: "Templates" },
-  { title: "Activity Feed", url: "/templates/activity-feed", category: "Templates" },
-  { title: "Chat Interface", url: "/templates/chat", category: "Templates" },
+  { title: "Project Board", url: "/docs/project-board", category: "Templates" },
+  { title: "Activity Feed", url: "/docs/activity-feed", category: "Templates" },
+  { title: "Chat Interface", url: "/docs/chat", category: "Templates" },
   { title: "Data Grid", url: "/docs/datagrid", category: "Library" },
 ];
 

@@ -14,6 +14,9 @@ import { KanbanDocs } from "@/components/docs/KanbanDocs";
 import { ChartsDocs } from "@/components/docs/ChartsDocs";
 import { AuthDocs } from "@/components/docs/AuthDocs";
 import { DataGridDocs } from "@/components/docs/DataGridDocs";
+import { ProjectBoardDocs } from "@/components/docs/ProjectBoardDocs";
+import { ActivityFeedDocs } from "@/components/docs/ActivityFeedDocs";
+import { ChatDocs } from "@/components/docs/ChatDocs";
 
 const componentMap: Record<string, React.FC> = {
   button: ButtonDocs,
@@ -25,6 +28,9 @@ const componentMap: Record<string, React.FC> = {
   charts: ChartsDocs,
   auth: AuthDocs,
   datagrid: DataGridDocs,
+  "project-board": ProjectBoardDocs,
+  "activity-feed": ActivityFeedDocs,
+  "chat": ChatDocs,
 };
 
 const Docs: React.FC = () => {
