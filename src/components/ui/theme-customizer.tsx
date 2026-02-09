@@ -3,6 +3,7 @@ import { Check, Moon, Paintbrush, Sun } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 import {
     Popover,
     PopoverContent,
@@ -198,6 +199,36 @@ export function ThemeCustomizer() {
                             ))}
                         </div>
                     </div>
+                </div>
+                <div className="mt-6">
+                    <Button
+                        className="w-full"
+                        onClick={() => {
+                            const selectedTheme = themes.find((t) => t.name === color);
+                            if (selectedTheme) {
+                                const css = `@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --primary: ${selectedTheme.activeColor.light};
+    --primary-foreground: 0 0% 98%;
+    --radius: ${radius}rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --primary: ${selectedTheme.activeColor.dark};
+    --primary-foreground: 240 5.9% 10%;
+  }
+}`;
+                                navigator.clipboard.writeText(css);
+                                toast.success("Theme code copied to clipboard!");
+                            }
+                        }}
+                    >
+                        Copy Code
+                    </Button>
                 </div>
             </PopoverContent>
         </Popover>
