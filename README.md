@@ -1,24 +1,3 @@
-# @farhod_dev/super-ui (Super UI Components)
-
-[![CI](https://github.com/Farhodoff/components-main/workflows/CI/badge.svg)](https://github.com/Farhodoff/components-main/actions)
-[![Storybook](https://github.com/Farhodoff/components-main/workflows/Deploy%20Storybook/badge.svg)](https://Farhodoff.github.io/components-main/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://www.typescriptlang.org/)
-[![React](https://img.shields.io/badge/React-18.3-blue)](https://reactjs.org/)
-[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%20AA-success)](#-accessibility)
-
-> **The premier Central Asia-focused accessible UI component library.**
-
-A comprehensive, production-ready React component library built with **Radix UI** and **Tailwind CSS**. Designed for high performance, strict type safety, and seamless integration.
-
-## 🚀 Key Benefits
-
-- **Accessible Components:** Built on Radix UI primitives with WCAG 2.1 AA compliance. Extensively tested via Playwright and Storybook a11y addons.
-- **Internationalization (i18n):** Deeply integrated English and Uzbek language support out of the box.
-- **Performant & Tree-Shakeable:** Modular ES Module exports ensure you only bundle the components you use.
-- **Type-Safe:** Compiled in strict TypeScript mode (`noImplicitAny: true`).
-- **Zero Database Coupling:** The core library handles UI only; database integrations are strictly relegated to optional example templates.
-- **Themeable:** Dynamic primary colors, border radii, and Dark/Light mode support.
 
 ## 🛠 Stack & Technologies
 
@@ -52,6 +31,27 @@ A comprehensive, production-ready React component library built with **Radix UI*
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![i18next](https://img.shields.io/badge/i18next-26A69A?style=for-the-badge&logo=i18next&logoColor=white)
 ![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge&logo=recharts&logoColor=white)
+# @farhod_dev/super-ui (Super UI Components)
+
+[![CI](https://github.com/Farhodoff/components-main/workflows/CI/badge.svg)](https://github.com/Farhodoff/components-main/actions)
+[![Storybook](https://github.com/Farhodoff/components-main/workflows/Deploy%20Storybook/badge.svg)](https://Farhodoff.github.io/components-main/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18.3-blue)](https://reactjs.org/)
+[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%20AA-success)](#-accessibility)
+
+> **The premier Central Asia-focused accessible UI component library.**
+
+A comprehensive, production-ready React component library built with **Radix UI** and **Tailwind CSS**. Designed for high performance, strict type safety, and seamless integration.
+
+## 🚀 Key Benefits
+
+- **Accessible Components:** Built on Radix UI primitives with WCAG 2.1 AA compliance. Extensively tested via Playwright and Storybook a11y addons.
+- **Internationalization (i18n):** Deeply integrated English and Uzbek language support out of the box.
+- **Performant & Tree-Shakeable:** Modular ES Module exports ensure you only bundle the components you use.
+- **Type-Safe:** Compiled in strict TypeScript mode (`noImplicitAny: true`).
+- **Zero Database Coupling:** The core library handles UI only; database integrations are strictly relegated to optional example templates.
+- **Themeable:** Dynamic primary colors, border radii, and Dark/Light mode support.
 
 ## 🛠 Getting Started
 
