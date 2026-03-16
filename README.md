@@ -1,17 +1,24 @@
-# @farhod_dev/super-ui
+# @farhod_dev/super-ui (Super UI Components)
 
 [![CI](https://github.com/Farhodoff/components-main/workflows/CI/badge.svg)](https://github.com/Farhodoff/components-main/actions)
 [![Storybook](https://github.com/Farhodoff/components-main/workflows/Deploy%20Storybook/badge.svg)](https://Farhodoff.github.io/components-main/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18.3-blue)](https://reactjs.org/)
+[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%20AA-success)](#-accessibility)
 
-A comprehensive, accessible React component library built with **Radix UI** and **Tailwind CSS**. 
-Featuring a dynamic **Theme Customizer**, **Internationalization (i18n)**, and ready for production use.
+> **The premier Central Asia-focused accessible UI component library.**
 
-## 🚀 Features
+A comprehensive, production-ready React component library built with **Radix UI** and **Tailwind CSS**. Designed for high performance, strict type safety, and seamless integration.
 
-- **Accessible Components**: Built on top of Radix UI primitives with WCAG 2.1 AA compliance
+## 🚀 Key Benefits
+
+- **Accessible Components:** Built on Radix UI primitives with WCAG 2.1 AA compliance. Extensively tested via Playwright and Storybook a11y addons.
+- **Internationalization (i18n):** Deeply integrated English and Uzbek language support out of the box.
+- **Performant & Tree-Shakeable:** Modular ES Module exports ensure you only bundle the components you use.
+- **Type-Safe:** Compiled in strict TypeScript mode (`noImplicitAny: true`).
+- **Zero Database Coupling:** The core library handles UI only; database integrations are strictly relegated to optional example templates.
+- **Themeable:** Dynamic primary colors, border radii, and Dark/Light mode support.
 - **Themeable**: Dynamic primary colors and border radius with Dark/Light mode support
 - **Internationalization**: English and Uzbek language support out of the box
 - **50+ Components**: Comprehensive UI components for modern web applications
@@ -30,17 +37,7 @@ Featuring a dynamic **Theme Customizer**, **Internationalization (i18n)**, and r
 
 ### Installation
 
-#### For Development
-
-Clone this repository and install dependencies:
-
-```bash
-git clone <your-repository-url>
-cd components-main
-pnpm install
-```
-
-#### As NPM Package (When Published)
+#### As NPM Package (Recommended)
 
 ```bash
 # Install via npm
@@ -48,21 +45,19 @@ npm install @farhod_dev/super-ui
 
 # Or via pnpm
 pnpm add @farhod_dev/super-ui
-
-# Or via yarn
-yarn add @farhod_dev/super-ui
 ```
 
-### Configuration
-Create a `.env` file in the root directory:
+*Note: The GitHub repository is named `components-main` but the published package is `@farhod_dev/super-ui`.*
 
-```env
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+#### For Local Development
+
+Clone this repository and install dependencies:
+
+```bash
+git clone https://github.com/Farhodoff/components-main.git
+cd components-main
+pnpm install
 ```
-
-### Database Setup
-This project requires Supabase tables. Run the SQL commands provided in [SCHEMA.md](./SCHEMA.md) to set up your database.
 
 ### Development
 
@@ -85,21 +80,19 @@ pnpm build
 
 ## 📄 Using Templates
 
-The library comes with pre-built page templates. You can import them directly:
+The library comes with pre-built page templates. **These templates are entirely optional and demonstrate how to compose apps using the library.**
+
+Some advanced templates (like the Dashboard and Auth templates) may include examples of database integrations using Supabase. These require setting up a `.env` file and running the SQL schema found in [`src/templates/SCHEMA.md`](./src/templates/SCHEMA.md). **The core `@farhod_dev/super-ui` components themselves have zero database dependencies.**
 
 ```tsx
 import { AnalyticsDashboard } from '@farhod_dev/super-ui';
 import { HeroSection } from '@farhod_dev/super-ui';
-import { ProjectBoard } from '@farhod_dev/super-ui';
-import { ChatInterface } from '@farhod_dev/super-ui';
 
 function MyPage() {
     return (
         <div>
            <HeroSection title="My Awesome App" />
            <AnalyticsDashboard />
-           <ProjectBoard />
-           <ChatInterface />
         </div>
     )
 }
@@ -110,9 +103,6 @@ function MyPage() {
 - **Dashboard**: `/templates/dashboard`
 - **Settings**: `/templates/settings`
 - **Auth**: `/templates/auth`
-- **Project Board**: `/templates/project-board`
-- **Activity Feed**: `/templates/activity-feed`
-- **Chat**: `/templates/chat`
 
 See `src/pages/templates` for full implementation examples.
 
@@ -153,7 +143,7 @@ function App() {
 
 ### Tailwind Configuration
 
-To use this library with Tailwind CSS in your project, extend your `tailwind.config.js`:
+To use this library with Tailwind CSS in your project, extend your `tailwind.config.ts` (or `.js`):
 
 ```js
 module.exports = {
@@ -167,10 +157,28 @@ module.exports = {
 }
 ```
 
-## 📖 Documentation
+## 🏗️ Project Monorepo Structure
 
-- **[Storybook](http://localhost:6006)**: Run `pnpm storybook` to view interactive component documentation
-- **TypeScript Definitions**: Full IntelliSense support with TypeScript definitions included
+We use a workspace-style structure to separate responsibilities:
+
+```
+├── cli/                 # Optional CLI tools for scaffolding components
+├── docs/                # Documentation site (VitePress)
+├── examples/            # Example playground apps 
+├── e2e/                 # End-to-End browser tests (Playwright)
+├── src/                 # The core component library source code
+    ├── components/
+    │   ├── ui/              # 50+ Core UI primitives
+    │   └── templates/       # Auth and Dashboard examples (DB coupled examples)
+    ├── hooks/               # Custom React hooks
+    ├── lib/                 # Utility functions
+    └── locales/             # i18n translations (en, uz)
+```
+
+## 📖 Documentation & Accessibility
+
+- **[Storybook](http://localhost:6006)**: Run `pnpm storybook` to view interactive component documentation.
+- **Accessibility:** We utilize `@storybook/addon-a11y` to continuously monitor WCAG compliance within our documentation. Validate accessibility locally via `pnpm storybook`.
 
 ## 🧪 Testing
 
@@ -250,17 +258,15 @@ Supported languages:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are highly welcome! We maintain an active Code Review process.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started. Be aware that inactive Pull Requests (14+ days) will be automatically marked as stale to keep our backlog clean. 
 
-## 📄 License
+## 📄 License & Branding
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Component Naming:** Derivative works are welcome, but we ask that you do not use the `@farhod_dev/` npm scope.
+- **Trademarks:** The "Super UI" branding remains the property of the author.
 
 ## 👤 Author
 
