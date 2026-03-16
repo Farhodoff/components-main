@@ -19,14 +19,39 @@ A comprehensive, production-ready React component library built with **Radix UI*
 - **Type-Safe:** Compiled in strict TypeScript mode (`noImplicitAny: true`).
 - **Zero Database Coupling:** The core library handles UI only; database integrations are strictly relegated to optional example templates.
 - **Themeable:** Dynamic primary colors, border radii, and Dark/Light mode support.
-- **Themeable**: Dynamic primary colors and border radius with Dark/Light mode support
-- **Internationalization**: English and Uzbek language support out of the box
-- **50+ Components**: Comprehensive UI components for modern web applications
-- **Form Primitives**: Advanced inputs, date pickers, and file uploads
-- **Data Display**: Tables, charts, timelines, and empty states
-- **Templates**: Ready-to-use Auth and Dashboard layouts
-- **TypeScript**: Full type safety with TypeScript support
-- **Storybook**: Interactive component documentation
+
+## 🛠 Stack & Technologies
+
+### Core
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+### Styling & UI
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix_UI-161618?style=for-the-badge&logo=radix-ui&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
+![Lucide Icons](https://img.shields.io/badge/Lucide_Icons-F7B93E?style=for-the-badge&logo=lucide&logoColor=black)
+
+### State & Forms
+![TanStack Query](https://img.shields.io/badge/TanStack_Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
+![TanStack Table](https://img.shields.io/badge/TanStack_Table-2563EB?style=for-the-badge&logo=google-sheets&logoColor=white)
+![React Hook Form](https://img.shields.io/badge/React_Hook_Form-EC5990?style=for-the-badge&logo=react-hook-form&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-3E67B1?style=for-the-badge&logo=zod&logoColor=white)
+
+### Testing & Quality
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+
+### Documentation
+![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+![VitePress](https://img.shields.io/badge/VitePress-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+### Data & Extras
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
+![i18next](https://img.shields.io/badge/i18next-26A69A?style=for-the-badge&logo=i18next&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-22B5BF?style=for-the-badge&logo=recharts&logoColor=white)
 
 ## 🛠 Getting Started
 
