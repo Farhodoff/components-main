@@ -1,7 +1,7 @@
 import React from "react";
-import { SimpleAreaChart, SimpleBarChart, SimplePieChart } from "@/components/library/Charts";
+import { SimpleBarChart, SimplePieChart } from "@/components/library/Charts";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { ArrowUpRight, ArrowDownRight, Users, DollarSign, Activity, CreditCard } from "lucide-react";
+import { Users, DollarSign, Activity, CreditCard } from "lucide-react";
 
 const chartdata = [
     { date: "Jan", Sales: 2890, Profit: 2338 },

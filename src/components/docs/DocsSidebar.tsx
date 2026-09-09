@@ -17,18 +17,38 @@ import {
 import { LibraryInput } from "@/components/library/LibraryInput";
 
 const componentItems = [
+  { title: "Tabs", url: "/docs/tabs", category: "Navigation" },
+  { title: "Accordion", url: "/docs/accordion", category: "Navigation" },
+  { title: "Breadcrumb", url: "/docs/breadcrumb", category: "Navigation" },
   { title: "Button", url: "/docs/button", category: "Form" },
   { title: "Input", url: "/docs/input", category: "Form" },
+  { title: "Textarea", url: "/docs/textarea", category: "Form" },
+  { title: "Select", url: "/docs/select", category: "Form" },
+  { title: "Checkbox", url: "/docs/checkbox", category: "Form" },
+  { title: "Switch", url: "/docs/switch", category: "Form" },
+  { title: "Slider", url: "/docs/slider", category: "Form" },
   { title: "Badge", url: "/docs/badge", category: "Display" },
+  { title: "Avatar", url: "/docs/avatar", category: "Display" },
+  { title: "Skeleton", url: "/docs/skeleton", category: "Display" },
+  { title: "Progress", url: "/docs/progress", category: "Display" },
   { title: "Alert", url: "/docs/alert", category: "Feedback" },
+  { title: "Dialog", url: "/docs/dialog", category: "Feedback" },
+  { title: "Tooltip", url: "/docs/tooltip", category: "Feedback" },
+  { title: "Popover", url: "/docs/popover", category: "Feedback" },
+  { title: "Toast", url: "/docs/toast", category: "Feedback" },
   { title: "Card", url: "/docs/card", category: "Layout" },
+  { title: "Combobox", url: "/docs/combobox", category: "Library" },
+  { title: "DatePicker", url: "/docs/datepicker", category: "Library" },
+  { title: "FileUpload", url: "/docs/file-upload", category: "Library" },
+  { title: "EmptyState", url: "/docs/empty-state", category: "Library" },
+  { title: "Timeline", url: "/docs/timeline", category: "Library" },
   { title: "Kanban Board", url: "/docs/kanban", category: "Library" },
   { title: "Charts & Analytics", url: "/docs/charts", category: "Library" },
+  { title: "Data Grid", url: "/docs/datagrid", category: "Library" },
   { title: "Auth Templates", url: "/docs/auth", category: "Templates" },
   { title: "Project Board", url: "/docs/project-board", category: "Templates" },
   { title: "Activity Feed", url: "/docs/activity-feed", category: "Templates" },
   { title: "Chat Interface", url: "/docs/chat", category: "Templates" },
-  { title: "Data Grid", url: "/docs/datagrid", category: "Library" },
 ];
 
 const gettingStartedItems = [
@@ -67,7 +87,7 @@ export function DocsSidebar() {
           <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10">
             <Package className="h-4 w-4 text-primary" />
           </div>
-          {!collapsed && <span className="font-semibold">ComponentLib</span>}
+          {!collapsed && <span className="font-semibold">Super UI</span>}
         </button>
       </div>
 

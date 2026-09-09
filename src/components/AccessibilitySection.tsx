@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import {
   LibraryCard,
@@ -16,52 +17,48 @@ import {
   Focus,
 } from "lucide-react";
 
-const features = [
-  {
-    icon: Keyboard,
-    title: "Keyboard Navigation",
-    description:
-      "All interactive components are fully accessible via keyboard with proper focus management and tab order.",
-    badge: "WCAG 2.1.1",
-  },
-  {
-    icon: Eye,
-    title: "Screen Reader Support",
-    description:
-      "Semantic HTML and ARIA attributes ensure compatibility with assistive technologies.",
-    badge: "WCAG 1.3.1",
-  },
-  {
-    icon: Palette,
-    title: "Color Contrast",
-    description:
-      "All color combinations meet WCAG AA contrast requirements for text and interactive elements.",
-    badge: "WCAG 1.4.3",
-  },
-  {
-    icon: Focus,
-    title: "Focus Indicators",
-    description:
-      "Clear, visible focus states that work across all themes and color modes.",
-    badge: "WCAG 2.4.7",
-  },
-  {
-    icon: MousePointer2,
-    title: "Touch Targets",
-    description:
-      "Minimum 44x44px touch targets for all interactive elements on touch devices.",
-    badge: "WCAG 2.5.5",
-  },
-  {
-    icon: Volume2,
-    title: "Motion Preferences",
-    description:
-      "Respects prefers-reduced-motion settings to accommodate users sensitive to animation.",
-    badge: "WCAG 2.3.3",
-  },
-];
-
 export const AccessibilitySection: React.FC = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Keyboard,
+      title: t("accessibility.features.keyboardTitle"),
+      description: t("accessibility.features.keyboardDesc"),
+      badge: "WCAG 2.1.1",
+    },
+    {
+      icon: Eye,
+      title: t("accessibility.features.screenReaderTitle"),
+      description: t("accessibility.features.screenReaderDesc"),
+      badge: "WCAG 1.3.1",
+    },
+    {
+      icon: Palette,
+      title: t("accessibility.features.colorContrastTitle"),
+      description: t("accessibility.features.colorContrastDesc"),
+      badge: "WCAG 1.4.3",
+    },
+    {
+      icon: Focus,
+      title: t("accessibility.features.focusIndicatorsTitle"),
+      description: t("accessibility.features.focusIndicatorsDesc"),
+      badge: "WCAG 2.4.7",
+    },
+    {
+      icon: MousePointer2,
+      title: t("accessibility.features.touchTargetsTitle"),
+      description: t("accessibility.features.touchTargetsDesc"),
+      badge: "WCAG 2.5.5",
+    },
+    {
+      icon: Volume2,
+      title: t("accessibility.features.motionPreferencesTitle"),
+      description: t("accessibility.features.motionPreferencesDesc"),
+      badge: "WCAG 2.3.3",
+    },
+  ];
+
   return (
     <section id="accessibility" className="py-20 md:py-28 bg-muted/30">
       <div className="container">
@@ -73,14 +70,13 @@ export const AccessibilitySection: React.FC = () => {
           className="text-center mb-16"
         >
           <LibraryBadge variant="success" className="mb-4">
-            Accessibility First
+            {t("accessibility.badge")}
           </LibraryBadge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Built for Everyone
+            {t("accessibility.title")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Every component is designed and tested to meet WCAG 2.1 AA
-            standards, ensuring your application is accessible to all users.
+            {t("accessibility.description")}
           </p>
         </motion.div>
 

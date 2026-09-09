@@ -26,26 +26,35 @@ export const Header: React.FC = () => {
 
   useEffect(() => {
     // Check active session
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchProfile(session.user.id);
-      }
-    });
+    supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => {
+        setUser(session?.user ?? null);
+        if (session?.user) {
+          fetchProfile(session.user.id);
+        }
+      })
+      .catch((err) => {
+        console.warn("Could not retrieve auth session:", err);
+      });
 
     // Listen for auth changes
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-      if (session?.user) {
-        fetchProfile(session.user.id);
-      } else {
-        setProfile(null);
-      }
-    });
+    try {
+      const {
+        data: { subscription },
+      } = supabase.auth.onAuthStateChange((_event, session) => {
+        setUser(session?.user ?? null);
+        if (session?.user) {
+          fetchProfile(session.user.id);
+        } else {
+          setProfile(null);
+        }
+      });
 
-    return () => subscription.unsubscribe();
+      return () => subscription?.unsubscribe();
+    } catch (err) {
+      console.warn("Could not attach auth listener:", err);
+    }
   }, []);
 
   const fetchProfile = async (userId: string) => {
@@ -68,14 +77,14 @@ export const Header: React.FC = () => {
           <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-primary/10">
             <Package className="h-5 w-5 text-primary" />
           </div>
-          <span className="font-semibold text-lg">ComponentLib</span>
+          <span className="font-semibold text-lg">Super UI</span>
           <LibraryBadge variant="secondary" size="sm">
-            v1.0.0
+            v0.0.3
           </LibraryBadge>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           <a
-            href="#components"
+            href="/#components"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("nav.components")}
@@ -87,7 +96,7 @@ export const Header: React.FC = () => {
             {t("nav.documentation")}
           </Link>
           <a
-            href="#accessibility"
+            href="/#accessibility"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
             {t("nav.themes")}
@@ -98,7 +107,7 @@ export const Header: React.FC = () => {
           <LanguageSwitcher />
 
           <Button variant="ghost" size="icon" asChild aria-label={t("nav.github")}>
-            <a href="https://github.com/Farhodoff" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Farhodoff/components-main" target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4" />
             </a>
           </Button>

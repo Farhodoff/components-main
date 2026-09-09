@@ -17,20 +17,61 @@ import { DataGridDocs } from "@/components/docs/DataGridDocs";
 import { ProjectBoardDocs } from "@/components/docs/ProjectBoardDocs";
 import { ActivityFeedDocs } from "@/components/docs/ActivityFeedDocs";
 import { ChatDocs } from "@/components/docs/ChatDocs";
+import { ComboboxDocs } from "@/components/docs/ComboboxDocs";
+import { DatePickerDocs } from "@/components/docs/DatePickerDocs";
+import { EmptyStateDocs } from "@/components/docs/EmptyStateDocs";
+import { FileUploadDocs } from "@/components/docs/FileUploadDocs";
+import { TimelineDocs } from "@/components/docs/TimelineDocs";
+import { DialogDocs } from "@/components/docs/DialogDocs";
+import { SelectDocs } from "@/components/docs/SelectDocs";
+import { TabsDocs } from "@/components/docs/TabsDocs";
+import { AccordionDocs } from "@/components/docs/AccordionDocs";
+import { BreadcrumbDocs } from "@/components/docs/BreadcrumbDocs";
+import { CheckboxDocs } from "@/components/docs/CheckboxDocs";
+import { SwitchDocs } from "@/components/docs/SwitchDocs";
+import { SliderDocs } from "@/components/docs/SliderDocs";
+import { TextareaDocs } from "@/components/docs/TextareaDocs";
+import { TooltipDocs } from "@/components/docs/TooltipDocs";
+import { PopoverDocs } from "@/components/docs/PopoverDocs";
+import { ToastDocs } from "@/components/docs/ToastDocs";
+import { AvatarDocs } from "@/components/docs/AvatarDocs";
+import { SkeletonDocs } from "@/components/docs/SkeletonDocs";
+import { ProgressDocs } from "@/components/docs/ProgressDocs";
 
 const componentMap: Record<string, React.FC> = {
+  tabs: TabsDocs,
+  accordion: AccordionDocs,
+  breadcrumb: BreadcrumbDocs,
   button: ButtonDocs,
   input: InputDocs,
+  textarea: TextareaDocs,
+  select: SelectDocs,
+  checkbox: CheckboxDocs,
+  switch: SwitchDocs,
+  slider: SliderDocs,
   badge: BadgeDocs,
+  avatar: AvatarDocs,
+  skeleton: SkeletonDocs,
+  progress: ProgressDocs,
   alert: AlertDocs,
   card: CardDocs,
+  dialog: DialogDocs,
+  tooltip: TooltipDocs,
+  popover: PopoverDocs,
+  toast: ToastDocs,
+  sonner: ToastDocs,
   kanban: KanbanDocs,
   charts: ChartsDocs,
   auth: AuthDocs,
   datagrid: DataGridDocs,
   "project-board": ProjectBoardDocs,
   "activity-feed": ActivityFeedDocs,
-  "chat": ChatDocs,
+  chat: ChatDocs,
+  combobox: ComboboxDocs,
+  datepicker: DatePickerDocs,
+  "empty-state": EmptyStateDocs,
+  "file-upload": FileUploadDocs,
+  timeline: TimelineDocs,
 };
 
 const Docs: React.FC = () => {

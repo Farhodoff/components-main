@@ -89,17 +89,17 @@ export const HeroSection: React.FC = () => {
               {
                 icon: Accessibility,
                 title: t("hero.features.accessible"),
-                description: "WCAG 2.1 AA compliant",
+                description: t("hero.features.accessibleDesc"),
               },
               {
                 icon: Zap,
                 title: t("hero.features.customizable"),
-                description: "Tree-shakable & optimized",
+                description: t("hero.features.customizableDesc"),
               },
               {
                 icon: Sparkles,
                 title: t("hero.features.openSource"),
-                description: "Interactive documentation",
+                description: t("hero.features.openSourceDesc"),
               },
             ].map((feature, index) => (
               <motion.div

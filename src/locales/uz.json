@@ -1,15 +1,91 @@
 {
     "hero": {
-        "badge": "ComponentLib Bilan Tanishing",
+        "badge": "Super UI Bilan Tanishing",
         "title": "Radix UI va Tailwind CSS bilan qurilgan chiroyli UI komponentlar.",
-        "description": "Ilovalaringizga nusxalab qo'yishingiz mumkin bo'lgan, hamyongir va moslashuvchan komponentlar. Mutlaqo bepul va ochiq kodli.",
+        "description": "Ilovalaringizga nusxalab qo'yishingiz mumkin bo'lgan, qulay va moslashuvchan komponentlar. Mutlaqo bepul va ochiq kodli.",
         "viewDocs": "Hujjatlarni Ko'rish",
         "exploreComponents": "Komponentlar",
         "features": {
             "customizable": "Moslashuvchan",
+            "customizableDesc": "Ixcham va optimallashtirilgan",
             "accessible": "Qulay",
-            "openSource": "Ochiq Kodli"
+            "accessibleDesc": "WCAG 2.1 AA standartiga mos",
+            "openSource": "Ochiq Kodli",
+            "openSourceDesc": "Interaktiv hujjatlar"
         }
+    },
+    "accessibility": {
+        "badge": "Foydalanish Qulayligi (a11y)",
+        "title": "Barcha Uchun Maxsus Yaratilgan",
+        "description": "Har bir komponent WCAG 2.1 AA standartlariga to'liq javob beradi va barcha foydalanuvchilar uchun qulaylikni ta'minlaydi.",
+        "features": {
+            "keyboardTitle": "Klaviatura Orqali Boshqarish",
+            "keyboardDesc": "Barcha interaktiv komponentlar klaviatura orqali boshqarish, fokus va tab tartibiga to'liq ega.",
+            "screenReaderTitle": "Ekran O'quvchilari (Screen Reader)",
+            "screenReaderDesc": "Semantik HTML va to'liq ARIA atributlari yordamchi texnologiyalar bilan 100% mos keladi.",
+            "colorContrastTitle": "Rang Kontrasti",
+            "colorContrastDesc": "Barcha rang kombinatsiyalari matn va elementlar uchun WCAG AA kontrast talablariga javob beradi.",
+            "focusIndicatorsTitle": "Aniq Fokus Ko'rsatkichlari",
+            "focusIndicatorsDesc": "Har qanday mavzu va rang rejimlarida aniq ko'rinadigan fokus holatlari.",
+            "touchTargetsTitle": "Sensor Bosish Maydoni",
+            "touchTargetsDesc": "Sensor ekranli qurilmalarda qulay bosish uchun kamida 44x44px o'lcham ta'minlangan.",
+            "motionPreferencesTitle": "Animatsiya Cheklovlari",
+            "motionPreferencesDesc": "Animatsiyaga sezgir foydalanuvchilar uchun tizimning prefers-reduced-motion sozlamalarini inobatga oladi."
+        }
+    },
+    "componentsShowcase": {
+        "sectionBadge": "Komponentlar",
+        "title": "Komponentlar Kutubxonasini Ko'ring",
+        "description": "Har bir komponent a11y qoidalari asosida, TypeScript tiplari bilan va interaktiv namunalar bilan yaratilgan.",
+        "button": {
+            "title": "Tugma (Button)",
+            "description": "Ko'p variantli va turli o'lchamdagi universal tugma komponenti"
+        },
+        "input": {
+            "title": "Kiritish Maydoni (Input)",
+            "description": "Belgilar, validatsiya va yorliqlar bilan qulay kiritish maydoni",
+            "emailLabel": "Elektron pochta",
+            "passwordLabel": "Parol",
+            "searchLabel": "Qidiruv",
+            "searchPlaceholder": "Qidirish...",
+            "searchSuccess": "12 ta natija topildi"
+        },
+        "badge": {
+            "title": "Nishon (Badge)",
+            "description": "Turli variantlar va piktogrammali holat nishonlari",
+            "featured": "Tanlangan",
+            "removable": "O'chiriladigan"
+        },
+        "alert": {
+            "title": "Ogohlantirish (Alert)",
+            "description": "Foydalanuvchiga muhim xabarlar va yangilanishlarni yetkazish uchun bildirishnomalar",
+            "infoTitle": "Ma'lumot",
+            "infoDesc": "Bu axborot beruvchi xabar hisoblanadi.",
+            "successTitle": "Muvaffaqiyatli!",
+            "successDesc": "O'zgarishlaringiz muvaffaqiyatli saqlandi.",
+            "warningTitle": "Diqqat",
+            "warningDesc": "Iltimos, davom etishdan oldin sozlamalaringizni tekshiring.",
+            "errorDesc": "So'rovingizni bajarishda xatolik yuz berdi."
+        },
+        "card": {
+            "title": "Karta (Card)",
+            "description": "Turli uslubdagi kontent va amallar uchun qulay karta konteyneri",
+            "defaultTitle": "Oddiy Karta",
+            "defaultDesc": "Toza va minimal dizayndagi karta",
+            "elevatedTitle": "Soyali Karta",
+            "elevatedDesc": "Yengil soya va chiziqli ko'tarilgan karta",
+            "glassTitle": "Shishasimon Karta",
+            "glassDesc": "Zamonaviy shisha (glassmorphism) effekti",
+            "cardContent": "Kartalar o'zaro bog'liq ma'lumotlar va amallarni birlashtirish uchun ishlatiladi.",
+            "action": "Harakat"
+        }
+    },
+    "footer": {
+        "documentation": "Hujjatlar",
+        "components": "Komponentlar",
+        "storybook": "Storybook",
+        "github": "GitHub",
+        "builtWith": "React, TypeScript va Tailwind CSS bilan yaratilgan. Ochiq kodli va umrbod bepul."
     },
     "nav": {
         "documentation": "Hujjatlar",
@@ -23,10 +99,11 @@
     "sidebar": {
         "gettingStarted": "Boshlash",
         "categories": {
-            "Form": "Forma",
-            "Display": "Ko'rinish",
-            "Feedback": "Qayta Aloqa",
-            "Layout": "Tuzilish",
+            "Navigation": "Navigatsiya va Ochilish",
+            "Form": "Shakl (Form)",
+            "Display": "Ko'rsatish (Display)",
+            "Feedback": "Qayta Aloqa va Oynalar",
+            "Layout": "Tuzilish (Layout)",
             "Library": "Kutubxona",
             "Templates": "Andozalar"
         },
@@ -34,11 +111,31 @@
             "Introduction": "Kirish",
             "Installation": "O'rnatish",
             "Theming": "Mavzular",
+            "Tabs": "Vkladkalar (Tabs)",
+            "Accordion": "Akkordeon (Accordion)",
+            "Breadcrumb": "Non Uvoqlari (Breadcrumb)",
             "Button": "Tugma",
             "Input": "Kiritish",
+            "Textarea": "Matn Maydoni (Textarea)",
+            "Select": "Tanlash (Select)",
+            "Checkbox": "Belgilash (Checkbox)",
+            "Switch": "Ulagich (Switch)",
+            "Slider": "Slayder (Slider)",
             "Badge": "Belgi",
+            "Avatar": "Avatar (Rasm)",
+            "Skeleton": "Karkas (Skeleton)",
+            "Progress": "Jarayon (Progress)",
             "Alert": "Ogohlantirish",
+            "Dialog": "Dialog / Modal",
+            "Tooltip": "Maslahat (Tooltip)",
+            "Popover": "Qalqib chiquvchi (Popover)",
+            "Toast": "Xabarnoma (Toast)",
             "Card": "Karta",
+            "Combobox": "Tanlov (Combobox)",
+            "DatePicker": "Sana Tanlagich",
+            "FileUpload": "Fayl Yuklash",
+            "EmptyState": "Bo'sh Holat",
+            "Timeline": "Vaqt Shkalasi",
             "Kanban Board": "Kanban Doskasi",
             "Charts & Analytics": "Diagramma va Tahlil",
             "Auth Templates": "Auth Andozalari",

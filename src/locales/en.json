@@ -1,15 +1,91 @@
 {
     "hero": {
-        "badge": "Introducing ComponentLib",
+        "badge": "Introducing Super UI",
         "title": "Beautiful UI components built with Radix UI and Tailwind CSS.",
         "description": "Accessible, composable, and customizable components that you can copy and paste into your apps. Free and open source.",
         "viewDocs": "View Documentation",
         "exploreComponents": "Explore Components",
         "features": {
             "customizable": "Customizable",
+            "customizableDesc": "Tree-shakable & optimized",
             "accessible": "Accessible",
-            "openSource": "Open Source"
+            "accessibleDesc": "WCAG 2.1 AA compliant",
+            "openSource": "Open Source",
+            "openSourceDesc": "Interactive documentation"
         }
+    },
+    "accessibility": {
+        "badge": "Accessibility First",
+        "title": "Built for Everyone",
+        "description": "Every component is designed and tested to meet WCAG 2.1 AA standards, ensuring your application is accessible to all users.",
+        "features": {
+            "keyboardTitle": "Keyboard Navigation",
+            "keyboardDesc": "All interactive components are fully accessible via keyboard with proper focus management and tab order.",
+            "screenReaderTitle": "Screen Reader Support",
+            "screenReaderDesc": "Semantic HTML and ARIA attributes ensure compatibility with assistive technologies.",
+            "colorContrastTitle": "Color Contrast",
+            "colorContrastDesc": "All color combinations meet WCAG AA contrast requirements for text and interactive elements.",
+            "focusIndicatorsTitle": "Focus Indicators",
+            "focusIndicatorsDesc": "Clear, visible focus states that work across all themes and color modes.",
+            "touchTargetsTitle": "Touch Targets",
+            "touchTargetsDesc": "Minimum 44x44px touch targets for all interactive elements on touch devices.",
+            "motionPreferencesTitle": "Motion Preferences",
+            "motionPreferencesDesc": "Respects prefers-reduced-motion settings to accommodate users sensitive to animation."
+        }
+    },
+    "componentsShowcase": {
+        "sectionBadge": "Components",
+        "title": "Explore the Component Library",
+        "description": "Each component is built with accessibility in mind, fully typed with TypeScript, and documented with interactive examples.",
+        "button": {
+            "title": "Button",
+            "description": "Versatile button component with multiple variants and sizes"
+        },
+        "input": {
+            "title": "Input",
+            "description": "Accessible input fields with labels, validation, and icons",
+            "emailLabel": "Email",
+            "passwordLabel": "Password",
+            "searchLabel": "Search",
+            "searchPlaceholder": "Search...",
+            "searchSuccess": "Found 12 results"
+        },
+        "badge": {
+            "title": "Badge",
+            "description": "Status indicators with multiple variants and optional icons",
+            "featured": "Featured",
+            "removable": "Removable"
+        },
+        "alert": {
+            "title": "Alert",
+            "description": "Callout messages for user feedback and status updates",
+            "infoTitle": "Information",
+            "infoDesc": "This is an informational alert message.",
+            "successTitle": "Success!",
+            "successDesc": "Your changes have been saved.",
+            "warningTitle": "Warning",
+            "warningDesc": "Please review your settings before proceeding.",
+            "errorDesc": "There was an error processing your request."
+        },
+        "card": {
+            "title": "Card",
+            "description": "Container for related content and actions with multiple styles",
+            "defaultTitle": "Default Card",
+            "defaultDesc": "Clean and minimal card design",
+            "elevatedTitle": "Elevated Card",
+            "elevatedDesc": "Card with subtle shadow and border",
+            "glassTitle": "Glass Card",
+            "glassDesc": "Modern glassmorphism effect",
+            "cardContent": "Cards are used to group related information and actions together.",
+            "action": "Action"
+        }
+    },
+    "footer": {
+        "documentation": "Documentation",
+        "components": "Components",
+        "storybook": "Storybook",
+        "github": "GitHub",
+        "builtWith": "Built with React, TypeScript, and Tailwind CSS. Open source and free forever."
     },
     "nav": {
         "documentation": "Documentation",
@@ -23,9 +99,10 @@
     "sidebar": {
         "gettingStarted": "Getting Started",
         "categories": {
+            "Navigation": "Navigation & Disclosure",
             "Form": "Form",
             "Display": "Display",
-            "Feedback": "Feedback",
+            "Feedback": "Feedback & Overlays",
             "Layout": "Layout",
             "Library": "Library",
             "Templates": "Templates"
@@ -34,11 +111,31 @@
             "Introduction": "Introduction",
             "Installation": "Installation",
             "Theming": "Theming",
+            "Tabs": "Tabs",
+            "Accordion": "Accordion",
+            "Breadcrumb": "Breadcrumb",
             "Button": "Button",
             "Input": "Input",
+            "Textarea": "Textarea",
+            "Select": "Select",
+            "Checkbox": "Checkbox",
+            "Switch": "Switch",
+            "Slider": "Slider",
             "Badge": "Badge",
+            "Avatar": "Avatar",
+            "Skeleton": "Skeleton",
+            "Progress": "Progress",
             "Alert": "Alert",
+            "Dialog": "Dialog",
+            "Tooltip": "Tooltip",
+            "Popover": "Popover",
+            "Toast": "Toast / Sonner",
             "Card": "Card",
+            "Combobox": "Combobox",
+            "DatePicker": "Date Picker",
+            "FileUpload": "File Upload",
+            "EmptyState": "Empty State",
+            "Timeline": "Timeline",
             "Kanban Board": "Kanban Board",
             "Charts & Analytics": "Charts & Analytics",
             "Auth Templates": "Auth Templates",

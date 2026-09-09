@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { ComponentShowcase } from "./ComponentShowcase";
 import { Button } from "./ui/button";
@@ -80,6 +81,8 @@ const cardCode = `import { LibraryCard } from "@/components/library/LibraryCard"
 </LibraryCard>`;
 
 export const ComponentsSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="components" className="py-20 md:py-28">
       <div className="container">
@@ -91,14 +94,13 @@ export const ComponentsSection: React.FC = () => {
           className="text-center mb-16"
         >
           <LibraryBadge variant="outline" className="mb-4">
-            Components
+            {t("componentsShowcase.sectionBadge")}
           </LibraryBadge>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Explore the Component Library
+            {t("componentsShowcase.title")}
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Each component is built with accessibility in mind, fully typed with
-            TypeScript, and documented with interactive Storybook examples.
+            {t("componentsShowcase.description")}
           </p>
         </motion.div>
 
@@ -111,8 +113,8 @@ export const ComponentsSection: React.FC = () => {
             transition={{ duration: 0.5 }}
           >
             <ComponentShowcase
-              title="Button"
-              description="Versatile button component with multiple variants and sizes"
+              title={t("componentsShowcase.button.title")}
+              description={t("componentsShowcase.button.description")}
               code={buttonCode}
             >
               <div className="flex flex-wrap items-center gap-3">
@@ -135,26 +137,26 @@ export const ComponentsSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <ComponentShowcase
-              title="Input"
-              description="Accessible input fields with labels, validation, and icons"
+              title={t("componentsShowcase.input.title")}
+              description={t("componentsShowcase.input.description")}
               code={inputCode}
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-3xl">
                 <LibraryInput
-                  label="Email"
+                  label={t("componentsShowcase.input.emailLabel")}
                   placeholder="you@example.com"
                   leftIcon={<Mail className="h-4 w-4" />}
                 />
                 <LibraryInput
-                  label="Password"
+                  label={t("componentsShowcase.input.passwordLabel")}
                   type="password"
-                  placeholder="Enter password"
+                  placeholder="••••••••"
                 />
                 <LibraryInput
-                  label="Search"
-                  placeholder="Search..."
+                  label={t("componentsShowcase.input.searchLabel")}
+                  placeholder={t("componentsShowcase.input.searchPlaceholder")}
                   leftIcon={<Search className="h-4 w-4" />}
-                  success="Found 12 results"
+                  success={t("componentsShowcase.input.searchSuccess")}
                 />
               </div>
             </ComponentShowcase>
@@ -168,8 +170,8 @@ export const ComponentsSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <ComponentShowcase
-              title="Badge"
-              description="Status indicators with multiple variants and optional icons"
+              title={t("componentsShowcase.badge.title")}
+              description={t("componentsShowcase.badge.description")}
               code={badgeCode}
             >
               <div className="flex flex-wrap items-center gap-3">
@@ -183,10 +185,10 @@ export const ComponentsSection: React.FC = () => {
                   icon={<Star className="h-3 w-3" />}
                   variant="secondary"
                 >
-                  Featured
+                  {t("componentsShowcase.badge.featured")}
                 </LibraryBadge>
                 <LibraryBadge removable onRemove={() => { }}>
-                  Removable
+                  {t("componentsShowcase.badge.removable")}
                 </LibraryBadge>
               </div>
             </ComponentShowcase>
@@ -200,22 +202,22 @@ export const ComponentsSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <ComponentShowcase
-              title="Alert"
-              description="Contextual feedback messages with dismissible option"
+              title={t("componentsShowcase.alert.title")}
+              description={t("componentsShowcase.alert.description")}
               code={alertCode}
             >
               <div className="flex flex-col gap-4 w-full max-w-xl">
-                <LibraryAlert variant="info" title="Information">
-                  This is an informational message for the user.
+                <LibraryAlert variant="info" title={t("componentsShowcase.alert.infoTitle")}>
+                  {t("componentsShowcase.alert.infoDesc")}
                 </LibraryAlert>
-                <LibraryAlert variant="success" title="Success!">
-                  Your changes have been saved successfully.
+                <LibraryAlert variant="success" title={t("componentsShowcase.alert.successTitle")}>
+                  {t("componentsShowcase.alert.successDesc")}
                 </LibraryAlert>
-                <LibraryAlert variant="warning" title="Warning">
-                  Please review before proceeding.
+                <LibraryAlert variant="warning" title={t("componentsShowcase.alert.warningTitle")}>
+                  {t("componentsShowcase.alert.warningDesc")}
                 </LibraryAlert>
                 <LibraryAlert variant="destructive" title="Error" dismissible>
-                  There was a problem with your request.
+                  {t("componentsShowcase.alert.errorDesc")}
                 </LibraryAlert>
               </div>
             </ComponentShowcase>
@@ -229,49 +231,49 @@ export const ComponentsSection: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <ComponentShowcase
-              title="Card"
-              description="Container component with multiple variants for different use cases"
+              title={t("componentsShowcase.card.title")}
+              description={t("componentsShowcase.card.description")}
               code={cardCode}
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
                 <LibraryCard variant="default">
                   <LibraryCardHeader>
-                    <LibraryCardTitle>Default Card</LibraryCardTitle>
+                    <LibraryCardTitle>{t("componentsShowcase.card.defaultTitle")}</LibraryCardTitle>
                     <LibraryCardDescription>
-                      A basic card with subtle border
+                      {t("componentsShowcase.card.defaultDesc")}
                     </LibraryCardDescription>
                   </LibraryCardHeader>
                   <LibraryCardContent>
                     <p className="text-sm text-muted-foreground">
-                      Card content goes here with any elements.
+                      {t("componentsShowcase.card.cardContent")}
                     </p>
                   </LibraryCardContent>
                 </LibraryCard>
 
                 <LibraryCard variant="elevated">
                   <LibraryCardHeader>
-                    <LibraryCardTitle>Elevated Card</LibraryCardTitle>
+                    <LibraryCardTitle>{t("componentsShowcase.card.elevatedTitle")}</LibraryCardTitle>
                     <LibraryCardDescription>
-                      Card with shadow elevation
+                      {t("componentsShowcase.card.elevatedDesc")}
                     </LibraryCardDescription>
                   </LibraryCardHeader>
                   <LibraryCardContent>
                     <p className="text-sm text-muted-foreground">
-                      Elevated cards stand out from the page.
+                      {t("componentsShowcase.card.cardContent")}
                     </p>
                   </LibraryCardContent>
                 </LibraryCard>
 
                 <LibraryCard variant="interactive">
                   <LibraryCardHeader>
-                    <LibraryCardTitle>Interactive Card</LibraryCardTitle>
+                    <LibraryCardTitle>{t("componentsShowcase.card.glassTitle")}</LibraryCardTitle>
                     <LibraryCardDescription>
-                      Hover for animation
+                      {t("componentsShowcase.card.glassDesc")}
                     </LibraryCardDescription>
                   </LibraryCardHeader>
                   <LibraryCardContent>
                     <p className="text-sm text-muted-foreground">
-                      Interactive cards respond to user actions.
+                      {t("componentsShowcase.card.cardContent")}
                     </p>
                   </LibraryCardContent>
                 </LibraryCard>
